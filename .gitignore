@@ -32,6 +32,7 @@ yarn-error.log*
 github_config.env
 cloudflare_config.env
 email_config.env
+emailjs_config.env
 
 # Critical files with API tokens and credentials
 cloudflare_access_test.py

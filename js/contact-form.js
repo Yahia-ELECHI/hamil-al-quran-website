@@ -4,24 +4,8 @@
  * Professional email integration for contact forms
  */
 
-// EmailJS Configuration - TO BE CONFIGURED
-const EMAILJS_CONFIG = {
-    serviceId: 'service_hamil_quran', // À remplacer par votre Service ID
-    templateId: 'template_contact_form', // À remplacer par votre Template ID  
-    publicKey: 'YOUR_EMAILJS_PUBLIC_KEY' // À remplacer par votre clé publique EmailJS
-};
-
-// Vérifier la configuration avant utilisation
-function isEmailJSConfigured() {
-    return EMAILJS_CONFIG.publicKey !== 'YOUR_EMAILJS_PUBLIC_KEY' &&
-           EMAILJS_CONFIG.serviceId !== 'service_hamil_quran' &&
-           EMAILJS_CONFIG.templateId !== 'template_contact_form';
-}
-
-// Initialize EmailJS
-(function() {
-    emailjs.init(EMAILJS_CONFIG.publicKey);
-})();
+// EmailJS Configuration - chargée depuis emailjs-config.js
+// La configuration est maintenant gérée de manière sécurisée
 
 // Form submission handler
 document.addEventListener('DOMContentLoaded', function() {
@@ -76,33 +60,33 @@ function handleFormSubmission(form) {
     const originalButtonText = submitButton.innerHTML;
     
     // Vérifier la configuration EmailJS
-    if (!isEmailJSConfigured()) {
-        showErrorMessage('Configuration EmailJS requise. Consultez EMAILJS_SETUP.md pour configurer le service.');
+    if (!window.isEmailJSConfigured || !window.isEmailJSConfigured()) {
+        showErrorMessage('Configuration EmailJS requise. Veuillez mettre à jour le fichier emailjs-config.js avec vos clés.');
         return;
     }
     
     // Show loading state
     setLoadingState(submitButton, true);
     
-    // Get form data
+    // Get form data - variables matching EmailJS template
     const formData = {
-        from_name: form.name.value,
-        from_email: form.email.value,
+        name: form.name.value,
+        email: form.email.value,
         subject: getSubjectText(form.subject.value),
         message: form.message.value,
-        to_email: 'contact@hamil-al-quran.com',
-        timestamp: new Date().toLocaleString('fr-FR', {
+        time: new Date().toLocaleString('fr-FR', {
             timeZone: 'Europe/Paris',
+            weekday: 'long',
             year: 'numeric',
-            month: '2-digit',
-            day: '2-digit',
+            month: 'long',
+            day: 'numeric',
             hour: '2-digit',
             minute: '2-digit'
         })
     };
     
     // Send email via EmailJS
-    emailjs.send(EMAILJS_CONFIG.serviceId, EMAILJS_CONFIG.templateId, formData)
+    emailjs.send(window.EMAILJS_CONFIG.serviceId, window.EMAILJS_CONFIG.templateId, formData)
         .then(function(response) {
             console.log('Email sent successfully:', response);
             showSuccessMessage();
