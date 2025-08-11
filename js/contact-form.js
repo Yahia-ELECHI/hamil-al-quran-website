@@ -4,12 +4,19 @@
  * Professional email integration for contact forms
  */
 
-// EmailJS Configuration
+// EmailJS Configuration - TO BE CONFIGURED
 const EMAILJS_CONFIG = {
-    serviceId: 'service_hamil_quran',
-    templateId: 'template_contact_form',
+    serviceId: 'service_hamil_quran', // À remplacer par votre Service ID
+    templateId: 'template_contact_form', // À remplacer par votre Template ID  
     publicKey: 'YOUR_EMAILJS_PUBLIC_KEY' // À remplacer par votre clé publique EmailJS
 };
+
+// Vérifier la configuration avant utilisation
+function isEmailJSConfigured() {
+    return EMAILJS_CONFIG.publicKey !== 'YOUR_EMAILJS_PUBLIC_KEY' &&
+           EMAILJS_CONFIG.serviceId !== 'service_hamil_quran' &&
+           EMAILJS_CONFIG.templateId !== 'template_contact_form';
+}
 
 // Initialize EmailJS
 (function() {
@@ -67,6 +74,12 @@ document.addEventListener('DOMContentLoaded', function() {
 function handleFormSubmission(form) {
     const submitButton = form.querySelector('button[type="submit"]');
     const originalButtonText = submitButton.innerHTML;
+    
+    // Vérifier la configuration EmailJS
+    if (!isEmailJSConfigured()) {
+        showErrorMessage('Configuration EmailJS requise. Consultez EMAILJS_SETUP.md pour configurer le service.');
+        return;
+    }
     
     // Show loading state
     setLoadingState(submitButton, true);

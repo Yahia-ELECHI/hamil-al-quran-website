@@ -31,33 +31,33 @@ document.addEventListener('DOMContentLoaded', function() {
 
 /* ===== NAVIGATION ===== */
 function initNavbar() {
-    const navbar = document.getElementById('navbar');
+    const navbar = document.querySelector('.navbar');
     const navToggle = document.getElementById('nav-toggle');
     const navMenu = document.getElementById('nav-menu');
     
-    // Navbar scroll effect
+    // Navbar scroll effect - with null check
     window.addEventListener('scroll', function() {
-        if (window.scrollY > 50) {
+        if (navbar && window.scrollY > 50) {
             navbar.classList.add('scrolled');
-        } else {
+        } else if (navbar) {
             navbar.classList.remove('scrolled');
         }
     });
     
-    // Mobile menu toggle
-    if (navToggle) {
+    // Mobile menu toggle - with null checks
+    if (navToggle && navMenu) {
         navToggle.addEventListener('click', function() {
             navMenu.classList.toggle('active');
             navToggle.classList.toggle('active');
         });
     }
     
-    // Close mobile menu when clicking on links
+    // Close mobile menu when clicking on links - with null checks
     const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
         link.addEventListener('click', function() {
-            navMenu.classList.remove('active');
-            navToggle.classList.remove('active');
+            if (navMenu) navMenu.classList.remove('active');
+            if (navToggle) navToggle.classList.remove('active');
         });
     });
 }
@@ -242,13 +242,21 @@ function redirectToStore(platform) {
 
 /* ===== SWIPER CARROUSEL INITIALIZATION ===== */
 function initializeSwiper() {
-    // Attendre que Swiper soit disponible
+    // Vérifier que Swiper est disponible
     if (typeof Swiper === 'undefined') {
-        console.error('❌ Swiper library not loaded');
+        console.warn('⚠️ Swiper library not loaded, skipping carousel initialization');
         return;
     }
     
-    const swiper = new Swiper('.screenshots-swiper', {
+    // Vérifier que l'élément existe
+    const swiperElement = document.querySelector('.screenshots-swiper');
+    if (!swiperElement) {
+        console.warn('⚠️ Screenshots swiper element not found');
+        return;
+    }
+    
+    try {
+        const swiper = new Swiper('.screenshots-swiper', {
         // Configuration générale
         loop: true,
         centeredSlides: true,
@@ -333,17 +341,29 @@ function initializeSwiper() {
     }
     
     return swiper;
+    } catch (error) {
+        console.error('❌ Error initializing Swiper carousel:', error);
+        return null;
+    }
 }
 
 /* ===== PHONE MOCKUP SWIPER INITIALIZATION ===== */
 function initializePhoneSwiper() {
-    // Attendre que Swiper soit disponible
+    // Vérifier que Swiper est disponible
     if (typeof Swiper === 'undefined') {
-        console.error('❌ Swiper library not loaded for phone mockup');
+        console.warn('⚠️ Swiper library not loaded, skipping phone mockup initialization');
         return;
     }
     
-    const phoneSwiper = new Swiper('.phone-swiper', {
+    // Vérifier que l'élément existe
+    const phoneSwiperElement = document.querySelector('.phone-swiper');
+    if (!phoneSwiperElement) {
+        console.warn('⚠️ Phone swiper element not found');
+        return;
+    }
+    
+    try {
+        const phoneSwiper = new Swiper('.phone-swiper', {
         // Configuration générale
         loop: true,
         direction: 'vertical',
@@ -387,6 +407,10 @@ function initializePhoneSwiper() {
     }
     
     return phoneSwiper;
+    } catch (error) {
+        console.error('❌ Error initializing phone mockup Swiper:', error);
+        return null;
+    }
 }
 
 /* ===== UTILITIES ===== */
