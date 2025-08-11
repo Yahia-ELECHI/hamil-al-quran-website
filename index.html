@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="حَامِلُ الْقُرْآنْ - Application moderne d'apprentissage et de révision du Coran avec système d'erreurs Tajweed, objectifs mensuels et enregistrements audio.">
+    <meta name="keywords" content="Coran, Quran, Tajweed, Islam, apprentissage, mémorisation, récitation, arabe">
+    <meta name="author" content="Yahia Elechi">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hamil-al-quran.com">
+    <meta property="og:title" content="حَامِلُ الْقُرْآنْ - Hamil Al-Quran">
+    <meta property="og:description" content="Application moderne d'apprentissage et de révision du Coran">
+    <meta property="og:image" content="https://hamil-al-quran.com/assets/app-preview.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://hamil-al-quran.com">
+    <meta property="twitter:title" content="حَامِلُ الْقُرْآنْ - Hamil Al-Quran">
+    <meta property="twitter:description" content="Application moderne d'apprentissage et de révision du Coran">
+    <meta property="twitter:image" content="https://hamil-al-quran.com/assets/app-preview.jpg">
+
+    <title>حَامِلُ الْقُرْآنْ - Hamil Al-Quran | Application d'apprentissage du Coran</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <div class="app-logo-circle">
+                    <div class="logo-content">
+                        <i class="fas fa-book-open"></i>
+                        <span class="app-name-arabic" lang="ar">حَامِلُ الْقُرْآنْ</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link" data-i18n="nav-home">Accueil</a>
+                <a href="#features" class="nav-link" data-i18n="nav-features">Fonctionnalités</a>
+                <a href="#download" class="nav-link" data-i18n="nav-download">Télécharger</a>
+                <a href="#tutorials" class="nav-link" data-i18n="nav-support">Support</a>
+                <a href="#privacy" class="nav-link" data-i18n="nav-privacy">Confidentialité</a>
+            </div>
+            
+            <div class="nav-controls">
+                <div class="language-selector">
+                    <button class="lang-btn active" data-lang="en">🇺🇸</button>
+                    <button class="lang-btn" data-lang="fr">🇫🇷</button>
+                    <button class="lang-btn" data-lang="ar">🇸🇦</button>
+                </div>
+                <div class="nav-toggle" id="nav-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="gradient-overlay"></div>
+            <div class="pattern-overlay"></div>
+        </div>
+        
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-logo animate-fade-up">
+                    <div class="hero-app-logo-circle">
+                        <div class="hero-logo-content">
+                            <i class="fas fa-book-open"></i>
+                            <span class="hero-app-name-arabic" lang="ar">حَامِلُ الْقُرْآنْ</span>
+                        </div>
+                    </div>
+                    <h1 class="hero-title" lang="ar">حَامِلُ الْقُرْآنْ</h1>
+                    <p class="hero-subtitle" data-i18n="hero-subtitle">
+                        Application moderne d'apprentissage et de révision du Coran
+                    </p>
+                </div>
+                
+                <div class="hero-description animate-fade-up" data-delay="200">
+                    <p data-i18n="hero-description">
+                        Une expérience d'apprentissage complète avec système d'erreurs Tajweed, 
+                        objectifs personnalisés, enregistrements audio et suivi de progression avancé.
+                    </p>
+                </div>
+                
+                <div class="hero-buttons animate-fade-up" data-delay="400">
+                    <a href="#download" class="btn btn-primary">
+                        <i class="fas fa-download"></i>
+                        <span data-i18n="btn-download">Télécharger</span>
+                    </a>
+                    <a href="#features" class="btn btn-secondary">
+                        <i class="fas fa-play"></i>
+                        <span data-i18n="btn-discover">Découvrir</span>
+                    </a>
+                </div>
+                
+                <!-- Citation inspirante -->
+                <div class="hero-quote animate-fade-up" data-delay="600">
+                    <div class="quote-content">
+                        <div class="quote-text" data-i18n="hero-quote">
+"خَيْرُكُمْ مَنْ تَعَلَّمَ الْقُرْآنَ وَعَلَّمَهُ"
+                        </div>
+                        <div class="quote-translation" data-i18n="hero-quote-translation">
+"Le meilleur d'entre vous est celui qui apprend le Coran et l'enseigne"
+                        </div>
+                        <div class="quote-reference" data-i18n="hero-quote-reference">
+Hadith rapporté par Al-Bukhārī
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-visual animate-fade-left">
+                <div class="phone-mockup">
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            <!-- Mini carrousel pour la maquette iPhone -->
+                            <div class="swiper phone-swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="assets/Screenshot_1754577052.png" alt="Écran d'accueil" class="screen-image">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="assets/Screenshot_1754579705.png" alt="Interface Mushaf" class="screen-image">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="assets/Screenshot_1754582841.png" alt="Système de révision" class="screen-image">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="assets/Screenshot_1754582875.png" alt="Enregistrements audio" class="screen-image">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="assets/Screenshot_1754582892.png" alt="Gestion des profils" class="screen-image">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="assets/Screenshot_1754582936.png" alt="Statistiques" class="screen-image">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="assets/Screenshot_1754583012.png" alt="Objectifs" class="screen-image">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="assets/Screenshot_1754583020.png" alt="Navigation Mushaf" class="screen-image">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="screen-overlay"></div>
+                        </div>
+                        <div class="phone-notch"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator animate-bounce">
+            <div class="scroll-dot"></div>
+            <div class="scroll-text" data-i18n="scroll-hint">Découvrir</div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header animate-fade-up">
+                <h2 class="section-title" data-i18n="features-title">Fonctionnalités Principales</h2>
+                <p class="section-description" data-i18n="features-description">
+                    Une suite complète d'outils pour l'apprentissage et la révision du Coran
+                </p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card animate-fade-up" data-delay="100">
+                    <div class="feature-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3 class="feature-title" data-i18n="feature-mushaf-title">Mushaf Interactif</h3>
+                    <p class="feature-description" data-i18n="feature-mushaf-desc">
+                        Naviguez dans le Coran avec 6 riwaya différentes (Hafs, Warsh, Al-Bazzi, etc.) 
+                        en haute qualité avec interface tactile intuitive.
+                    </p>
+                </div>
+                
+                <div class="feature-card animate-fade-up" data-delay="200">
+                    <div class="feature-icon">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <h3 class="feature-title" data-i18n="feature-audio-title">Enregistrements Audio</h3>
+                    <p class="feature-description" data-i18n="feature-audio-desc">
+                        Enregistrez votre récitation avec le système Tasmi3, 
+                        écoutez vos progrès et partagez avec votre enseignant.
+                    </p>
+                </div>
+                
+                <div class="feature-card animate-fade-up" data-delay="300">
+                    <div class="feature-icon">
+                        <i class="fas fa-spell-check"></i>
+                    </div>
+                    <h3 class="feature-title" data-i18n="feature-tajweed-title">Erreurs Tajweed</h3>
+                    <p class="feature-description" data-i18n="feature-tajweed-desc">
+                        Système avancé de marquage des erreurs avec 12+ types d'erreurs Tajweed, 
+                        commentaires et statistiques détaillées.
+                    </p>
+                </div>
+                
+                <div class="feature-card animate-fade-up" data-delay="400">
+                    <div class="feature-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3 class="feature-title" data-i18n="feature-objectives-title">Objectifs Personnalisés</h3>
+                    <p class="feature-description" data-i18n="feature-objectives-desc">
+                        Définissez vos objectifs mensuels et annuels, 
+                        suivez votre progression avec des statistiques visuelles.
+                    </p>
+                </div>
+                
+                <div class="feature-card animate-fade-up" data-delay="500">
+                    <div class="feature-icon">
+                        <i class="fas fa-repeat"></i>
+                    </div>
+                    <h3 class="feature-title" data-i18n="feature-tekrar-title">Système Tekrar</h3>
+                    <p class="feature-description" data-i18n="feature-tekrar-desc">
+                        Créez des compteurs de répétition pour sourates, pages ou versets 
+                        avec suivi automatique de progression.
+                    </p>
+                </div>
+                
+                <div class="feature-card animate-fade-up" data-delay="600">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="feature-title" data-i18n="feature-stats-title">Statistiques Avancées</h3>
+                    <p class="feature-description" data-i18n="feature-stats-desc">
+                        Visualisez vos progrès avec graphiques détaillés, 
+                        jours consécutifs et analyse des erreurs par sourate.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Download Section -->
+    <section id="download" class="download">
+        <div class="container">
+            <div class="download-content animate-fade-up">
+                <h2 class="section-title" data-i18n="download-title">Télécharger l'Application</h2>
+                <p class="section-description" data-i18n="download-description">
+                    Disponible gratuitement sur toutes les plateformes
+                </p>
+                
+                <div class="download-buttons">
+                    <a href="#" class="download-btn android" data-platform="android">
+                        <div class="btn-icon">
+                            <i class="fab fa-google-play"></i>
+                        </div>
+                        <div class="btn-text">
+                            <span class="btn-subtitle" data-i18n="download-on">Disponible sur</span>
+                            <span class="btn-title">Google Play</span>
+                        </div>
+                    </a>
+                    
+                    <a href="#" class="download-btn ios" data-platform="ios">
+                        <div class="btn-icon">
+                            <i class="fab fa-apple"></i>
+                        </div>
+                        <div class="btn-text">
+                            <span class="btn-subtitle" data-i18n="download-on">Disponible sur</span>
+                            <span class="btn-title">App Store</span>
+                        </div>
+                    </a>
+                    
+                    <a href="#" class="download-btn windows" data-platform="windows">
+                        <div class="btn-icon">
+                            <i class="fab fa-windows"></i>
+                        </div>
+                        <div class="btn-text">
+                            <span class="btn-subtitle" data-i18n="download-for">Pour</span>
+                            <span class="btn-title">Windows</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="download-info">
+                    <div class="info-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <span data-i18n="download-secure">100% Sécurisé</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-gift"></i>
+                        <span data-i18n="download-free">Entièrement Gratuit</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-globe"></i>
+                        <span data-i18n="download-multilang">Multilingue</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tutoriel Section -->
+    <section id="tutorials" class="tutorials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="tutorials-title">Tutoriels Vidéo</h2>
+                <p class="section-description" data-i18n="tutorials-description">
+                    Découvrez comment utiliser l'application avec nos tutoriels courts et pratiques
+                </p>
+            </div>
+            
+            <div class="tutorials-grid">
+                <div class="tutorial-card">
+                    <div class="tutorial-video">
+                        <iframe 
+                            src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=0" 
+                            title="Tutoriel 1" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="tutorial-info">
+                        <h3 data-i18n="tutorial-1-title">Première utilisation</h3>
+                        <p data-i18n="tutorial-1-desc">Apprenez les bases de l'application</p>
+                    </div>
+                </div>
+
+                <div class="tutorial-card">
+                    <div class="tutorial-video">
+                        <iframe 
+                            src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=1" 
+                            title="Tutoriel 2" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="tutorial-info">
+                        <h3 data-i18n="tutorial-2-title">Système de révision</h3>
+                        <p data-i18n="tutorial-2-desc">Créez vos objectifs de révision</p>
+                    </div>
+                </div>
+
+                <div class="tutorial-card">
+                    <div class="tutorial-video">
+                        <iframe 
+                            src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=2" 
+                            title="Tutoriel 3" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="tutorial-info">
+                        <h3 data-i18n="tutorial-3-title">Détection d'erreurs Tajweed</h3>
+                        <p data-i18n="tutorial-3-desc">Utilisez le système d'analyse audio</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Privacy Section -->
+    <section id="privacy" class="privacy">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="privacy-title">Confidentialité et Sécurité</h2>
+                <p class="section-description" data-i18n="privacy-description">
+                    Votre confidentialité est notre priorité. Découvrez comment nous protégeons vos données.
+                </p>
+            </div>
+            
+            <div class="privacy-content">
+                <div class="privacy-features">
+                    <div class="privacy-feature">
+                        <div class="privacy-icon">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <h3 data-i18n="privacy-no-account-title">Sans Compte Utilisateur</h3>
+                        <p data-i18n="privacy-no-account-desc">Aucune inscription requise, utilisez l'application immédiatement sans partager d'informations</p>
+                    </div>
+
+                    <div class="privacy-feature">
+                        <div class="privacy-icon">
+                            <i class="fas fa-user-secret"></i>
+                        </div>
+                        <h3 data-i18n="privacy-anonymous-title">Utilisation Anonyme</h3>
+                        <p data-i18n="privacy-anonymous-desc">Aucune donnée personnelle n'est collectée ou partagée avec des tiers</p>
+                    </div>
+
+                    <div class="privacy-feature">
+                        <div class="privacy-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3 data-i18n="privacy-local-title">Stockage Local</h3>
+                        <p data-i18n="privacy-local-desc">Vos progrès et objectifs restent sur votre appareil uniquement</p>
+                    </div>
+
+                    <div class="privacy-feature">
+                        <div class="privacy-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <h3 data-i18n="privacy-no-tracking-title">Aucun Tracking</h3>
+                        <p data-i18n="privacy-no-tracking-desc">Pas de publicité, pas de suivi comportemental, pas d'analytics invasifs</p>
+                    </div>
+
+                    <div class="privacy-feature">
+                        <div class="privacy-icon">
+                            <i class="fas fa-microphone-slash"></i>
+                        </div>
+                        <h3 data-i18n="privacy-audio-title">Enregistrements Privés</h3>
+                        <p data-i18n="privacy-audio-desc">Vos récitations audio restent sur votre appareil, jamais envoyées vers des serveurs</p>
+                    </div>
+
+                    <div class="privacy-feature">
+                        <div class="privacy-icon">
+                            <i class="fas fa-eye-slash"></i>
+                        </div>
+                        <h3 data-i18n="privacy-offline-title">Mode Hors-ligne</h3>
+                        <p data-i18n="privacy-offline-desc">Fonctionnement complet sans connexion internet, protection totale de la vie privée</p>
+                    </div>
+                </div>
+
+                <div class="privacy-cta">
+                    <a href="privacy.html" class="btn btn-outline" data-i18n="privacy-policy-btn">Lire la Politique Complète</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <div class="app-logo-circle">
+                            <div class="logo-content">
+                                <i class="fas fa-book-open"></i>
+                                <span class="app-name-arabic" lang="ar">حَامِلُ الْقُرْآنْ</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="footer-description" data-i18n="footer-description">
+                        Application moderne d'apprentissage et de révision du Coran 
+                        avec fonctionnalités avancées pour tous les niveaux.
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title" data-i18n="footer-links">Liens Utiles</h3>
+                    <ul class="footer-links">
+                        <li><a href="#features" data-i18n="nav-features">Fonctionnalités</a></li>
+                        <li><a href="#screenshots" data-i18n="nav-screenshots">Captures</a></li>
+                        <li><a href="#download" data-i18n="nav-download">Télécharger</a></li>
+                        <li><a href="#tutorials" data-i18n="nav-support">Support</a></li>
+                        <li><a href="privacy.html" data-i18n="nav-privacy">Confidentialité</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title" data-i18n="footer-support">Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="contact.html" data-i18n="footer-contact">Contact</a></li>
+                        <li><a href="faq.html" data-i18n="footer-faq">FAQ</a></li>
+                        <li><a href="about.html" data-i18n="footer-about">À propos</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title" data-i18n="footer-follow">Nous Suivre</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="social-link" title="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link" title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p data-i18n="footer-copyright">
+                    © 2024 حَامِلُ الْقُرْآنْ - Hamil Al-Quran. Tous droits réservés.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Swiper.js CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <!-- Scripts personnalisés -->
+    <script src="js/animations.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
