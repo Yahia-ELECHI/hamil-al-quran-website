@@ -4,19 +4,13 @@
  * Secure configuration management for EmailJS
  */
 
-// Configuration EmailJS - sera chargée de manière sécurisée
+// Configuration EmailJS - sécurisée pour production
 window.EMAILJS_CONFIG = {
-    // INSTRUCTIONS : Remplacez ces valeurs par vos vraies clés EmailJS
-    // Après avoir créé votre compte sur https://www.emailjs.com/
-    
-    // 1. SERVICE ID : Obtenu après avoir connecté votre Gmail
-    serviceId: 'VOTRE_SERVICE_ID_ICI',
-    
-    // 2. TEMPLATE ID : Créé pour le formulaire de contact  
-    templateId: 'VOTRE_TEMPLATE_ID_ICI',
-    
-    // 3. PUBLIC KEY : Clé publique de votre compte EmailJS
-    publicKey: 'VOTRE_PUBLIC_KEY_ICI'
+    // Variables d'environnement Cloudflare Pages (production)
+    // Sinon valeurs locales pour développement
+    serviceId: typeof EMAILJS_SERVICE_ID !== 'undefined' ? EMAILJS_SERVICE_ID : 'service_wkk110j',
+    templateId: typeof EMAILJS_TEMPLATE_ID !== 'undefined' ? EMAILJS_TEMPLATE_ID : 'template_twpnd3j',
+    publicKey: typeof EMAILJS_PUBLIC_KEY !== 'undefined' ? EMAILJS_PUBLIC_KEY : 'AFEbB7rRqpRJFDIdt'
 };
 
 /**
