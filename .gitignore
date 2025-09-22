@@ -1,0 +1,51 @@
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.local
+.env.production.local
+github_config.env
+cloudflare_config.env
+email_config.env
+emailjs_config.env
+
+# Critical files with API tokens and credentials
+cloudflare_access_test.py
+create_github_repo.py
+deploy-r2.ps1
+
+# Build outputs
+dist/
+build/
+.output/
+
+# Node modules
+node_modules/
+
+# Deployment files
+.wrangler/
