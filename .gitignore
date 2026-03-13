@@ -39,6 +39,9 @@ cloudflare_access_test.py
 create_github_repo.py
 deploy-r2.ps1
 
+# Installers
+*.exe
+
 # Build outputs
 dist/
 build/
