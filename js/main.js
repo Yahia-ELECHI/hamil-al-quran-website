@@ -229,14 +229,16 @@ function redirectToStore(platform) {
     const url = storeUrls[platform];
     
     if (url) {
-        // Ouvrir dans un nouvel onglet avec sécurité
-        const newWindow = window.open(url, '_blank', 'noopener,noreferrer');
-        
-        if (!newWindow) {
-            // Fallback si le popup est bloqué
-            alert('Veuillez autoriser les popups pour télécharger l\'application');
+        if (platform === 'windows') {
+            // Téléchargement direct pour Windows (évite le blocage popup)
+            window.location.href = url;
+        } else {
+            // Ouvrir les stores dans un nouvel onglet
+            const newWindow = window.open(url, '_blank', 'noopener,noreferrer');
+            if (!newWindow) {
+                window.location.href = url;
+            }
         }
-        
         console.log(`🚀 Redirecting to ${platform} store: ${url}`);
     } else {
         console.error(`Platform not supported: ${platform}`);
