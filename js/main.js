@@ -223,17 +223,10 @@ function redirectToStore(platform) {
     const storeUrls = {
         'android': 'https://play.google.com/store/apps/details?id=com.tajweed.quran_tajweed&pcampaignid=web_share',
         'ios': 'https://apps.apple.com/us/app/%D8%AD-%D8%A7%D9%85-%D9%84-%D8%A7%D9%84-%D9%82-%D8%B1-%D8%A2%D9%86/id6749209998',
-        'windows': 'https://github.com/your-repo/releases/latest' // TODO: Remplacer par le vrai repo GitHub
+        'windows': 'https://github.com/Yahia-ELECHI/hamil-al-quran-website/releases/latest/download/HamilAlQuran_Setup_2.0.3.exe'
     };
     
     const url = storeUrls[platform];
-    
-    // Vérification des liens valides avant redirection
-    if (platform === 'windows' && url.includes('your-repo')) {
-        alert('L\'application Windows n\'est pas encore disponible. Veuillez réessayer plus tard.');
-        console.warn('🪟 Windows download URL not configured properly');
-        return;
-    }
     
     if (url) {
         // Ouvrir dans un nouvel onglet avec sécurité
