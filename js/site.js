@@ -90,7 +90,11 @@ if(tuto){
     vid.autoplay=true;
     vid.playsInline=true;
     vid.setAttribute('controlsList','nodownload');
-    vid.onerror=()=>{holder.innerHTML=`<p class="tuto-error">Vidéo indisponible ici — <a href="https://www.youtube.com/watch?v=${v}&list=${list}" target="_blank" rel="noopener">regarder sur YouTube</a>.</p>`};
+    vid.onerror=()=>{
+      const url=`https://www.youtube.com/watch?v=${v}&list=${list}`;
+      const msg=(window.i18nT?i18nT('tu_err'):"Vidéo indisponible ici — <a href='__URL__' target='_blank' rel='noopener'>regarder sur YouTube</a>.").replace('__URL__',url);
+      holder.innerHTML=`<p class="tuto-error">${msg}</p>`;
+    };
     holder.appendChild(vid);
     ytLink.href=`https://www.youtube.com/watch?v=${v}&list=${list}`;
     modal.hidden=false;

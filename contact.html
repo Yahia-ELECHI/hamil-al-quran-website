@@ -23,12 +23,17 @@
   <div class="nav-in">
     <a href="index.html" class="brand"><img src="assets/logo.png" alt="Hamil Al-Quran"><span class="ar">حَامِلُ الْقُرْآنْ</span></a>
     <div class="nav-links" id="navlinks">
-      <a href="index.html#features">Fonctionnalités</a>
-      <a href="index.html#ecole">École</a>
-      <a href="index.html#outils">Outils</a>
-      <a href="index.html#tutoriels">Tutoriels</a>
-      <a href="faq.html">FAQ</a>
-      <a href="index.html#download" class="nav-cta">Télécharger</a>
+      <a href="index.html#features" data-i18n="nav_features">Fonctionnalités</a>
+      <a href="index.html#ecole" data-i18n="nav_ecole">École</a>
+      <a href="index.html#outils" data-i18n="nav_outils">Outils</a>
+      <a href="index.html#tutoriels" data-i18n="nav_tutos">Tutoriels</a>
+      <a href="faq.html" data-i18n="nav_faq">FAQ</a>
+      <div class="lang-switch">
+        <button type="button" data-lang="fr">FR</button>
+        <button type="button" data-lang="en">EN</button>
+        <button type="button" data-lang="ar" lang="ar">ع</button>
+      </div>
+      <a href="index.html#download" class="nav-cta" data-i18n="nav_dl">Télécharger</a>
     </div>
     <div class="burger" id="burger"><span></span><span></span><span></span></div>
   </div>
@@ -37,9 +42,9 @@
 <!-- EN-TÊTE -->
 <section class="page-head">
   <div class="container">
-    <span class="kicker">Contact</span>
-    <h1>Nous contacter</h1>
-    <p>Nous sommes là pour vous aider. Une question, un problème, une idée&nbsp;? Écrivez-nous.</p>
+    <span class="kicker" data-i18n="c_kicker">Contact</span>
+    <h1 data-i18n="c_h1">Nous contacter</h1>
+    <p data-i18n="c_p">Nous sommes là pour vous aider. Une question, un problème, une idée&nbsp;? Écrivez-nous.</p>
   </div>
 </section>
 
@@ -49,64 +54,64 @@
     <div class="contact-side">
       <div class="card reveal">
         <div class="ic"><i class="fas fa-envelope"></i></div>
-        <h3>Email</h3>
-        <p>Envoyez-nous un message et nous vous répondrons rapidement.</p>
+        <h3 data-i18n="c1_t">Email</h3>
+        <p data-i18n="c1_d">Envoyez-nous un message et nous vous répondrons rapidement.</p>
         <a href="mailto:contact@hamil-al-quran.com" class="link">contact@hamil-al-quran.com</a>
       </div>
       <div class="card reveal">
         <div class="ic"><i class="fas fa-comments"></i></div>
-        <h3>Support technique</h3>
-        <p>Besoin d'aide avec l'application&nbsp;? Consultez d'abord notre FAQ, la réponse s'y trouve peut-être déjà.</p>
-        <a href="faq.html" class="link">Voir la FAQ</a>
+        <h3 data-i18n="c2_t">Support technique</h3>
+        <p data-i18n="c2_d">Besoin d'aide avec l'application&nbsp;? Consultez d'abord notre FAQ, la réponse s'y trouve peut-être déjà.</p>
+        <a href="faq.html" class="link" data-i18n="c2_link">Voir la FAQ</a>
       </div>
       <div class="card reveal">
         <div class="ic"><i class="fas fa-lightbulb"></i></div>
-        <h3>Suggestions</h3>
-        <p>Vous avez des idées pour améliorer l'application&nbsp;? Partagez-les avec nous.</p>
+        <h3 data-i18n="c3_t">Suggestions</h3>
+        <p data-i18n="c3_d">Vous avez des idées pour améliorer l'application&nbsp;? Partagez-les avec nous.</p>
         <a href="mailto:suggestions@hamil-al-quran.com" class="link">suggestions@hamil-al-quran.com</a>
       </div>
     </div>
 
     <div class="panel form-card reveal">
-      <h2>Envoyez-nous un message</h2>
+      <h2 data-i18n="c_form_h2">Envoyez-nous un message</h2>
       <form class="contact-form" id="contactForm" novalidate>
         <div class="form-group">
-          <label for="name">Nom</label>
+          <label for="name" data-i18n="c_l_name">Nom</label>
           <input type="text" id="name" name="name" required minlength="2" maxlength="50"
-                 placeholder="Votre nom complet">
+                 placeholder="Votre nom complet" data-i18n-ph="c_ph_name">
           <span class="field-error" id="name-error"></span>
         </div>
 
         <div class="form-group">
-          <label for="email">Email</label>
+          <label for="email" data-i18n="c_l_email">Email</label>
           <input type="email" id="email" name="email" required maxlength="100"
-                 placeholder="votre.email@exemple.com">
+                 placeholder="votre.email@exemple.com" data-i18n-ph="c_ph_email">
           <span class="field-error" id="email-error"></span>
         </div>
 
         <div class="form-group">
-          <label for="subject">Sujet</label>
+          <label for="subject" data-i18n="c_l_subject">Sujet</label>
           <select id="subject" name="subject" required>
-            <option value="">Sélectionnez un sujet</option>
-            <option value="support">Support technique</option>
-            <option value="suggestion">Suggestion</option>
-            <option value="bug">Signalement de bug</option>
-            <option value="other">Autre</option>
+            <option value="" data-i18n="c_o_sel">Sélectionnez un sujet</option>
+            <option value="support" data-i18n="c_o_support">Support technique</option>
+            <option value="suggestion" data-i18n="c_o_sugg">Suggestion</option>
+            <option value="bug" data-i18n="c_o_bug">Signalement de bug</option>
+            <option value="other" data-i18n="c_o_other">Autre</option>
           </select>
           <span class="field-error" id="subject-error"></span>
         </div>
 
         <div class="form-group">
-          <label for="message">Message</label>
+          <label for="message" data-i18n="c_l_msg">Message</label>
           <textarea id="message" name="message" rows="6" required minlength="10" maxlength="1000"
-                    placeholder="Décrivez votre demande en détail..."></textarea>
+                    placeholder="Décrivez votre demande en détail..." data-i18n-ph="c_ph_msg"></textarea>
           <span class="field-error" id="message-error"></span>
           <div class="character-count">
             <span id="message-count">0</span>/1000
           </div>
         </div>
 
-        <button type="submit" class="btn btn-gold">
+        <button type="submit" class="btn btn-gold" data-i18n="c_send">
           <i class="fas fa-paper-plane"></i>
           Envoyer le message
         </button>
@@ -121,35 +126,36 @@
     <div class="f-grid">
       <div>
         <a href="index.html" class="brand"><img src="assets/logo.png" alt="" style="width:40px"><span class="ar">حَامِلُ الْقُرْآنْ</span></a>
-        <p>L'application moderne de mémorisation et de révision du Coran, pour toute la famille et les cercles d'apprentissage.</p>
+        <p data-i18n="ft_about">L'application moderne de mémorisation et de révision du Coran, pour toute la famille et les cercles d'apprentissage.</p>
       </div>
       <div>
-        <h4>Navigation</h4>
+        <h4 data-i18n="ft_nav">Navigation</h4>
         <ul>
-          <li><a href="index.html#features">Fonctionnalités</a></li>
-          <li><a href="index.html#ecole">Module École</a></li>
-          <li><a href="index.html#outils">Outils du musulman</a></li>
-          <li><a href="index.html#tutoriels">Tutoriels</a></li>
-          <li><a href="index.html#download">Télécharger</a></li>
+          <li><a href="index.html#features" data-i18n="nav_features">Fonctionnalités</a></li>
+          <li><a href="index.html#ecole" data-i18n="ft_ecole">Module École</a></li>
+          <li><a href="index.html#outils" data-i18n="ft_outils">Outils du musulman</a></li>
+          <li><a href="index.html#tutoriels" data-i18n="nav_tutos">Tutoriels</a></li>
+          <li><a href="index.html#download" data-i18n="nav_dl">Télécharger</a></li>
         </ul>
       </div>
       <div>
-        <h4>Ressources</h4>
+        <h4 data-i18n="ft_res">Ressources</h4>
         <ul>
-          <li><a href="about.html">À propos</a></li>
-          <li><a href="faq.html">FAQ</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="privacy.html">Confidentialité</a></li>
+          <li><a href="about.html" data-i18n="ft_apropos">À propos</a></li>
+          <li><a href="faq.html" data-i18n="nav_faq">FAQ</a></li>
+          <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+          <li><a href="privacy.html" data-i18n="ft_privacy">Confidentialité</a></li>
         </ul>
       </div>
     </div>
-    <div class="f-bottom">© 2026 حَامِلُ الْقُرْآنْ — Hamil Al-Quran. Tous droits réservés.</div>
+    <div class="f-bottom" data-i18n="ft_copy">© 2026 حَامِلُ الْقُرْآنْ — Hamil Al-Quran. Tous droits réservés.</div>
   </div>
 </footer>
 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script src="js/emailjs-config.js"></script>
 <script src="js/contact-form.js"></script>
+<script src="js/i18n.js"></script>
 <script src="js/site.js"></script>
 </body>
 </html>

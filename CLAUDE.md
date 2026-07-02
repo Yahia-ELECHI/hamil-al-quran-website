@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Marketing website for **Hamil Al-Quran** (حامل القرآن), a Quran memorization/revision app. Pure static site: hand-written HTML, one shared stylesheet, vanilla JS. No framework, no package.json, no build step, no tests, no linter. The site content is French-only; code comments and the internal docs (`EMAILJS_SETUP.md`, `PRODUCTION_DEPLOYMENT.md`) are also in French.
+Marketing website for **Hamil Al-Quran** (حامل القرآن), a Quran memorization/revision app. Pure static site: hand-written HTML, one shared stylesheet, vanilla JS. No framework, no package.json, no build step, no tests, no linter. The site is trilingual (fr/en/ar — see Internationalization); French is the authored source language. Code comments and the internal docs (`EMAILJS_SETUP.md`, `PRODUCTION_DEPLOYMENT.md`) are in French.
 
 ## Commands
 
@@ -13,7 +13,7 @@ Marketing website for **Hamil Al-Quran** (حامل القرآن), a Quran memori
 
 ## Architecture (navy+gold redesign, 2026)
 
-Five pages share **`css/theme.css`** (the navy+gold theme: CSS variables in `:root`, fixed animated background `.bg`/`.orb`/`.pattern`, nav, cards, panels, footer, responsive rules) and **`js/site.js`** (nav scroll state, burger menu, `.reveal` IntersectionObserver animation, hero phone carousel — each block guarded so it works on every page):
+Five pages share **`css/theme.css`** (the navy+gold theme: CSS variables in `:root`, fixed animated background `.bg`/`.orb`/`.pattern`, nav, cards, panels, footer, RTL overrides, responsive rules), **`js/i18n.js`** (trilingual dictionary + language engine) and **`js/site.js`** (nav scroll state, burger menu, `.reveal` IntersectionObserver animation, hero phone carousel, tutorials carousel/modal — each block guarded so it works on every page):
 
 | Page | Specifics |
 |------|-----------|
@@ -31,6 +31,12 @@ Fragile spots learned the hard way:
 - **Grid overflow guards**: `.hero-grid>*` and `.band>*` have `min-width:0`; `.mini-phone` width is `clamp()`ed so the École band fits mobile.
 - `.reveal` never hides content by default — `.in` only plays an entrance animation (deliberate no-JS safety).
 
+### Internationalization (fr / en / ar)
+
+`js/i18n.js` holds one dictionary (`window.I18N`) with `fr`, `en`, `ar` sub-objects (~260 keys each) plus the engine. Elements opt in via `data-i18n="key"` (applied with `innerHTML` — strings may embed icons/links/`<strong>`; all authored by us) and `data-i18n-ph="key"` for placeholders. Language resolution: `?lang=xx` URL override → `localStorage['hq-lang']` → `navigator.language` (fr/ar, else en). Arabic flips `document.documentElement.dir` to `rtl`. The selector is the `.lang-switch` button group in each page's nav. **Adding text = add the key to all three locales** and the `data-i18n` attribute; the French HTML text is the fallback. The privacy policy is fully translated with a "la version française fait foi" note (`p_ref`, empty string in fr).
+
+RTL gotchas already handled — keep them in mind for new components: transform/scroll carousels (`.phone-track`, `.tuto-track`, `.gallery`) are forced `direction:ltr` because rtl inverts `translateX`/`scrollLeft`; use `text-align:start` instead of `left`; `.character-count` is forced ltr (bidi reorders "0/1000"); the select chevron and `.quote` accent border have `[dir=rtl]` overrides.
+
 ### Contact form / EmailJS
 
 `js/contact-form.js` expects this exact DOM on `contact.html`: `form.contact-form#contactForm`, fields named/id'd `name`/`email`/`subject`/`message`, error spans `#<field>-error`, counter `#message-count`. It reads `document.documentElement.lang` for message language. `js/emailjs-config.js` resolves `EMAILJS_SERVICE_ID`/`EMAILJS_TEMPLATE_ID`/`EMAILJS_PUBLIC_KEY` from Cloudflare Pages env vars, falling back to hardcoded dev values.
@@ -45,9 +51,9 @@ Playback is deliberately NOT a YouTube embed: the channel's videos have embeddin
 
 Store badges in `index.html#download` are plain `<a href>` links. The Windows link embeds the release version (`releases/download/v2.0.4/HamilAlQuran_Setup_2.0.4.exe`) — shipping a new installer means uploading the `.exe` to a GitHub Release and updating that one href. `*.exe` is gitignored; the installer in the repo root is distributed via Releases, never committed.
 
-## Legacy files (kept, mostly unused)
+## Legacy files
 
-`css/styles.css`, `js/main.js`, `js/i18n.js`, `js/animations.js` are the pre-redesign stack. The main site no longer loads them, but **`quran-competition-privacy.html`** (standalone privacy page for a separate app) still links `css/styles.css` — don't delete it. The old trilingual i18n system (`data-i18n` + `js/i18n.js`) is dead; the redesigned site hardcodes French.
+The pre-redesign stack is gone (`js/main.js`, `js/animations.js` deleted; `js/i18n.js` was rewritten from scratch for the new design). **`css/styles.css` is kept only because `quran-competition-privacy.html`** (standalone privacy page for a separate app) still links it — don't delete either.
 
 ## Repo pitfalls
 

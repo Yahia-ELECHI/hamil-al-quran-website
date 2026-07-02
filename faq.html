@@ -23,12 +23,17 @@
   <div class="nav-in">
     <a href="index.html" class="brand"><img src="assets/logo.png" alt="Hamil Al-Quran"><span class="ar">حَامِلُ الْقُرْآنْ</span></a>
     <div class="nav-links" id="navlinks">
-      <a href="index.html#features">Fonctionnalités</a>
-      <a href="index.html#ecole">École</a>
-      <a href="index.html#outils">Outils</a>
-      <a href="index.html#tutoriels">Tutoriels</a>
-      <a href="contact.html">Contact</a>
-      <a href="index.html#download" class="nav-cta">Télécharger</a>
+      <a href="index.html#features" data-i18n="nav_features">Fonctionnalités</a>
+      <a href="index.html#ecole" data-i18n="nav_ecole">École</a>
+      <a href="index.html#outils" data-i18n="nav_outils">Outils</a>
+      <a href="index.html#tutoriels" data-i18n="nav_tutos">Tutoriels</a>
+      <a href="contact.html" data-i18n="nav_contact">Contact</a>
+      <div class="lang-switch">
+        <button type="button" data-lang="fr">FR</button>
+        <button type="button" data-lang="en">EN</button>
+        <button type="button" data-lang="ar" lang="ar">ع</button>
+      </div>
+      <a href="index.html#download" class="nav-cta" data-i18n="nav_dl">Télécharger</a>
     </div>
     <div class="burger" id="burger"><span></span><span></span><span></span></div>
   </div>
@@ -37,9 +42,9 @@
 <!-- EN-TÊTE -->
 <section class="page-head">
   <div class="container">
-    <span class="kicker">FAQ</span>
-    <h1>Questions fréquentes</h1>
-    <p>Trouvez rapidement les réponses aux questions les plus courantes sur l'application.</p>
+    <span class="kicker" data-i18n="faq_kicker">FAQ</span>
+    <h1 data-i18n="faq_h2">Questions fréquentes</h1>
+    <p data-i18n="fq_p">Trouvez rapidement les réponses aux questions les plus courantes sur l'application.</p>
   </div>
 </section>
 
@@ -47,27 +52,27 @@
 <section class="page-main">
   <div class="container">
     <div class="faq">
-      <div class="group reveal">Général</div>
-      <details class="qa reveal"><summary>Qu'est-ce que حَامِلُ الْقُرْآنْ ?<i class="fas fa-plus plus"></i></summary><div class="a">حَامِلُ الْقُرْآنْ (Hamil Al-Quran, «&nbsp;le porteur du Coran&nbsp;») est une application de mémorisation et de révision du Coran&nbsp;: Mushaf multi-riwaya, plans de révision intelligents, marquage des erreurs de Tajweed, module École pour enseignants et élèves, et outils du musulman (boussole Qibla, athkar, calendrier hégirien…).</div></details>
-      <details class="qa reveal"><summary>L'application est-elle gratuite ?<i class="fas fa-plus plus"></i></summary><div class="a">Oui, Hamil Al-Quran est entièrement gratuite, sans publicité ni abonnement.</div></details>
-      <details class="qa reveal"><summary>Sur quelles plateformes est-elle disponible ?<i class="fas fa-plus plus"></i></summary><div class="a">Sur iPhone et iPad (App Store), Android (Google Play) et Windows (téléchargement direct). Rendez-vous sur la <a href="index.html#download">page de téléchargement</a>.</div></details>
-      <details class="qa reveal"><summary>Convient-elle aux enfants ?<i class="fas fa-plus plus"></i></summary><div class="a">Oui, sous la responsabilité d'un parent ou tuteur. Les profils permettent de suivre la mémorisation de chaque membre de la famille.</div></details>
+      <div class="group reveal" data-i18n="fq_g1">Général</div>
+      <details class="qa reveal"><summary><span data-i18n="fq_q1">Qu'est-ce que حَامِلُ الْقُرْآنْ ?</span><i class="fas fa-plus plus"></i></summary><div class="a" data-i18n="fq_a1">حَامِلُ الْقُرْآنْ (Hamil Al-Quran, « le porteur du Coran ») est une application de mémorisation et de révision du Coran : Mushaf multi-riwaya, plans de révision intelligents, marquage des erreurs de Tajweed, module École pour enseignants et élèves, et outils du musulman (boussole Qibla, athkar, calendrier hégirien…).</div></details>
+      <details class="qa reveal"><summary><span data-i18n="faq_q1">L'application est-elle gratuite ?</span><i class="fas fa-plus plus"></i></summary><div class="a" data-i18n="faq_a1">Oui, Hamil Al-Quran est entièrement gratuite, sans publicité ni abonnement.</div></details>
+      <details class="qa reveal"><summary><span data-i18n="fq_q3">Sur quelles plateformes est-elle disponible ?</span><i class="fas fa-plus plus"></i></summary><div class="a" data-i18n="fq_a3">Sur iPhone et iPad (App Store), Android (Google Play) et Windows (téléchargement direct). Rendez-vous sur la <a href="index.html#download">page de téléchargement</a>.</div></details>
+      <details class="qa reveal"><summary><span data-i18n="faq_q5">Convient-elle aux enfants ?</span><i class="fas fa-plus plus"></i></summary><div class="a" data-i18n="faq_a5">Oui, sous la responsabilité d'un parent ou tuteur. Les profils permettent de suivre la mémorisation de chaque membre de la famille.</div></details>
 
-      <div class="group reveal">Fonctionnalités</div>
-      <details class="qa reveal"><summary>Quelles riwāyāt sont disponibles ?<i class="fas fa-plus plus"></i></summary><div class="a">Ḥafṣ est inclus, et d'autres transmissions (Warsh, Qālūn…) sont téléchargeables à la demande.</div></details>
-      <details class="qa reveal"><summary>Comment fonctionne le marquage des erreurs Tajweed ?<i class="fas fa-plus plus"></i></summary><div class="a">Pendant le tasmīʿ, marquez les erreurs directement sur la page, par type de règle, avec commentaires. L'application en tire des statistiques détaillées pour cibler vos révisions.</div></details>
-      <details class="qa reveal"><summary>Puis-je définir des objectifs personnalisés ?<i class="fas fa-plus plus"></i></summary><div class="a">Oui&nbsp;: objectifs mensuels et annuels, suivi des jours consécutifs, des pages révisées et de la progression, en graphiques clairs.</div></details>
-      <details class="qa reveal"><summary>Que propose le module École ?<i class="fas fa-plus plus"></i></summary><div class="a">Il relie enseignants et élèves par un simple code&nbsp;: groupes, séances en direct (audio/vidéo), correction du tasmīʿ à distance en annotant la page de l'élève, et profils d'enseignants vérifiés (ijāza).</div></details>
+      <div class="group reveal" data-i18n="fq_g2">Fonctionnalités</div>
+      <details class="qa reveal"><summary><span data-i18n="faq_q4">Quelles riwāyāt sont disponibles ?</span><i class="fas fa-plus plus"></i></summary><div class="a" data-i18n="faq_a4">Ḥafṣ est inclus, et d'autres transmissions (Warsh, Qālūn…) sont téléchargeables à la demande.</div></details>
+      <details class="qa reveal"><summary><span data-i18n="fq_q6">Comment fonctionne le marquage des erreurs Tajweed ?</span><i class="fas fa-plus plus"></i></summary><div class="a" data-i18n="fq_a6">Pendant le tasmīʿ, marquez les erreurs directement sur la page, par type de règle, avec commentaires. L'application en tire des statistiques détaillées pour cibler vos révisions.</div></details>
+      <details class="qa reveal"><summary><span data-i18n="fq_q7">Puis-je définir des objectifs personnalisés ?</span><i class="fas fa-plus plus"></i></summary><div class="a" data-i18n="fq_a7">Oui : objectifs mensuels et annuels, suivi des jours consécutifs, des pages révisées et de la progression, en graphiques clairs.</div></details>
+      <details class="qa reveal"><summary><span data-i18n="fq_q8">Que propose le module École ?</span><i class="fas fa-plus plus"></i></summary><div class="a" data-i18n="fq_a8">Il relie enseignants et élèves par un simple code : groupes, séances en direct (audio/vidéo), correction du tasmīʿ à distance en annotant la page de l'élève, et profils d'enseignants vérifiés (ijāza).</div></details>
 
-      <div class="group reveal">Technique &amp; données</div>
-      <details class="qa reveal"><summary>Faut-il un compte ou internet ?<i class="fas fa-plus plus"></i></summary><div class="a">Non. L'application fonctionne hors-ligne, sans compte. La création d'un compte est optionnelle&nbsp;: elle sert uniquement à synchroniser votre progression entre vos appareils.</div></details>
-      <details class="qa reveal"><summary>Mes données sont-elles sauvegardées ?<i class="fas fa-plus plus"></i></summary><div class="a">Sans compte, vos données sont enregistrées localement sur votre appareil. Avec un compte (optionnel), elles sont en plus synchronisées de manière chiffrée pour être retrouvées sur tous vos appareils.</div></details>
-      <details class="qa reveal"><summary>Mes données sont-elles protégées ?<i class="fas fa-plus plus"></i></summary><div class="a">Oui. Sans compte, vos données restent sur votre appareil. Avec un compte, elles sont chiffrées, cloisonnées et hébergées dans l'Union européenne. Vous pouvez supprimer votre compte et toutes vos données à tout moment depuis l'application. Voir notre <a href="privacy.html">politique de confidentialité</a>.</div></details>
-      <details class="qa reveal"><summary>Y a-t-il de la publicité ou du tracking ?<i class="fas fa-plus plus"></i></summary><div class="a">Non. Pas de publicité, pas de tracking publicitaire, pas de profilage comportemental.</div></details>
+      <div class="group reveal" data-i18n="fq_g3">Technique &amp; données</div>
+      <details class="qa reveal"><summary><span data-i18n="faq_q2">Faut-il un compte ou internet ?</span><i class="fas fa-plus plus"></i></summary><div class="a" data-i18n="faq_a2">Non. L'application fonctionne hors-ligne, sans compte. La création d'un compte est optionnelle : elle sert uniquement à synchroniser votre progression entre vos appareils.</div></details>
+      <details class="qa reveal"><summary><span data-i18n="fq_q10">Mes données sont-elles sauvegardées ?</span><i class="fas fa-plus plus"></i></summary><div class="a" data-i18n="fq_a10">Sans compte, vos données sont enregistrées localement sur votre appareil. Avec un compte (optionnel), elles sont en plus synchronisées de manière chiffrée pour être retrouvées sur tous vos appareils.</div></details>
+      <details class="qa reveal"><summary><span data-i18n="faq_q3">Mes données sont-elles protégées ?</span><i class="fas fa-plus plus"></i></summary><div class="a" data-i18n="faq_a3">Oui. Sans compte, vos données restent sur votre appareil. Avec un compte, elles sont chiffrées, cloisonnées et hébergées dans l'Union européenne. Vous pouvez supprimer votre compte et toutes vos données à tout moment depuis l'application. Voir notre <a href="privacy.html">politique de confidentialité</a>.</div></details>
+      <details class="qa reveal"><summary><span data-i18n="fq_q12">Y a-t-il de la publicité ou du tracking ?</span><i class="fas fa-plus plus"></i></summary><div class="a" data-i18n="fq_a12">Non. Pas de publicité, pas de tracking publicitaire, pas de profilage comportemental.</div></details>
     </div>
 
     <div class="hero-cta reveal" style="justify-content:center;margin-top:40px">
-      <a href="contact.html" class="btn btn-gold"><i class="fas fa-envelope"></i> Une autre question ? Contactez-nous</a>
+      <a href="contact.html" class="btn btn-gold" data-i18n="fq_cta"><i class="fas fa-envelope"></i> Une autre question ? Contactez-nous</a>
     </div>
   </div>
 </section>
@@ -78,32 +83,33 @@
     <div class="f-grid">
       <div>
         <a href="index.html" class="brand"><img src="assets/logo.png" alt="" style="width:40px"><span class="ar">حَامِلُ الْقُرْآنْ</span></a>
-        <p>L'application moderne de mémorisation et de révision du Coran, pour toute la famille et les cercles d'apprentissage.</p>
+        <p data-i18n="ft_about">L'application moderne de mémorisation et de révision du Coran, pour toute la famille et les cercles d'apprentissage.</p>
       </div>
       <div>
-        <h4>Navigation</h4>
+        <h4 data-i18n="ft_nav">Navigation</h4>
         <ul>
-          <li><a href="index.html#features">Fonctionnalités</a></li>
-          <li><a href="index.html#ecole">Module École</a></li>
-          <li><a href="index.html#outils">Outils du musulman</a></li>
-          <li><a href="index.html#tutoriels">Tutoriels</a></li>
-          <li><a href="index.html#download">Télécharger</a></li>
+          <li><a href="index.html#features" data-i18n="nav_features">Fonctionnalités</a></li>
+          <li><a href="index.html#ecole" data-i18n="ft_ecole">Module École</a></li>
+          <li><a href="index.html#outils" data-i18n="ft_outils">Outils du musulman</a></li>
+          <li><a href="index.html#tutoriels" data-i18n="nav_tutos">Tutoriels</a></li>
+          <li><a href="index.html#download" data-i18n="nav_dl">Télécharger</a></li>
         </ul>
       </div>
       <div>
-        <h4>Ressources</h4>
+        <h4 data-i18n="ft_res">Ressources</h4>
         <ul>
-          <li><a href="about.html">À propos</a></li>
-          <li><a href="faq.html">FAQ</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="privacy.html">Confidentialité</a></li>
+          <li><a href="about.html" data-i18n="ft_apropos">À propos</a></li>
+          <li><a href="faq.html" data-i18n="nav_faq">FAQ</a></li>
+          <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+          <li><a href="privacy.html" data-i18n="ft_privacy">Confidentialité</a></li>
         </ul>
       </div>
     </div>
-    <div class="f-bottom">© 2026 حَامِلُ الْقُرْآنْ — Hamil Al-Quran. Tous droits réservés.</div>
+    <div class="f-bottom" data-i18n="ft_copy">© 2026 حَامِلُ الْقُرْآنْ — Hamil Al-Quran. Tous droits réservés.</div>
   </div>
 </footer>
 
+<script src="js/i18n.js"></script>
 <script src="js/site.js"></script>
 </body>
 </html>

@@ -33,13 +33,18 @@
   <div class="nav-in">
     <a href="#home" class="brand"><img src="assets/logo.png" alt="Hamil Al-Quran"><span class="ar">حَامِلُ الْقُرْآنْ</span></a>
     <div class="nav-links" id="navlinks">
-      <a href="#features">Fonctionnalités</a>
-      <a href="#ecole">École</a>
-      <a href="#outils">Outils</a>
-      <a href="#tutoriels">Tutoriels</a>
-      <a href="#apercu">Aperçu</a>
-      <a href="#faq">FAQ</a>
-      <a href="#download" class="nav-cta">Télécharger</a>
+      <a href="#features" data-i18n="nav_features">Fonctionnalités</a>
+      <a href="#ecole" data-i18n="nav_ecole">École</a>
+      <a href="#outils" data-i18n="nav_outils">Outils</a>
+      <a href="#tutoriels" data-i18n="nav_tutos">Tutoriels</a>
+      <a href="#apercu" data-i18n="nav_apercu">Aperçu</a>
+      <a href="#faq" data-i18n="nav_faq">FAQ</a>
+      <div class="lang-switch">
+        <button type="button" data-lang="fr">FR</button>
+        <button type="button" data-lang="en">EN</button>
+        <button type="button" data-lang="ar" lang="ar">ع</button>
+      </div>
+      <a href="#download" class="nav-cta" data-i18n="nav_dl">Télécharger</a>
     </div>
     <div class="burger" id="burger"><span></span><span></span><span></span></div>
   </div>
@@ -51,16 +56,16 @@
     <div class="hero-content">
       <img src="assets/logo.png" alt="" class="hero-logo">
       <h1 lang="ar">حَامِلُ الْقُرْآنْ</h1>
-      <p class="tagline">Mémorisez et révisez le Coran, autrement.</p>
-      <p class="lead">Une application complète et élégante : Mushaf multi-riwaya, plans de révision intelligents, détection d'erreurs de Tajweed, module École pour enseignants et élèves, et une boîte à outils du musulman — le tout hors-ligne, avec synchronisation cloud sécurisée en option.</p>
+      <p class="tagline" data-i18n="hero_tagline">Mémorisez et révisez le Coran, autrement.</p>
+      <p class="lead" data-i18n="hero_lead">Une application complète et élégante : Mushaf multi-riwaya, plans de révision intelligents, détection d'erreurs de Tajweed, module École pour enseignants et élèves, et une boîte à outils du musulman — le tout hors-ligne, avec synchronisation cloud sécurisée en option.</p>
       <div class="hero-cta">
-        <a href="#download" class="btn btn-gold"><i class="fas fa-download"></i> Télécharger</a>
-        <a href="#features" class="btn btn-ghost"><i class="fas fa-compass"></i> Découvrir</a>
+        <a href="#download" class="btn btn-gold" data-i18n="hero_btn_dl"><i class="fas fa-download"></i> Télécharger</a>
+        <a href="#features" class="btn btn-ghost" data-i18n="hero_btn_disc"><i class="fas fa-compass"></i> Découvrir</a>
       </div>
       <div class="quote reveal">
-        <div class="q">خَيْرُكُمْ مَنْ تَعَلَّمَ الْقُرْآنَ وَعَلَّمَهُ</div>
-        <div class="t">« Le meilleur d'entre vous est celui qui apprend le Coran et l'enseigne. »</div>
-        <div class="r">Rapporté par Al-Bukhārī</div>
+        <div class="q" lang="ar">خَيْرُكُمْ مَنْ تَعَلَّمَ الْقُرْآنَ وَعَلَّمَهُ</div>
+        <div class="t" data-i18n="quote_t">« Le meilleur d'entre vous est celui qui apprend le Coran et l'enseigne. »</div>
+        <div class="r" data-i18n="quote_r">Rapporté par Al-Bukhārī</div>
       </div>
     </div>
     <div class="hero-visual">
@@ -86,11 +91,11 @@
 <!-- TRUST -->
 <div class="container">
   <div class="trust reveal">
-    <div class="chip"><i class="fas fa-gift"></i> Gratuit</div>
-    <div class="chip"><i class="fas fa-wifi"></i> Fonctionne hors-ligne</div>
-    <div class="chip"><i class="fas fa-cloud"></i> Sync cloud optionnelle</div>
-    <div class="chip"><i class="fas fa-shield-halved"></i> Conforme RGPD</div>
-    <div class="chip"><i class="fas fa-language"></i> عربي · Français · English</div>
+    <div class="chip"><i class="fas fa-gift"></i> <span data-i18n="trust_free">Gratuit</span></div>
+    <div class="chip"><i class="fas fa-wifi"></i> <span data-i18n="trust_offline">Fonctionne hors-ligne</span></div>
+    <div class="chip"><i class="fas fa-cloud"></i> <span data-i18n="trust_sync">Sync cloud optionnelle</span></div>
+    <div class="chip"><i class="fas fa-shield-halved"></i> <span data-i18n="trust_rgpd">Conforme RGPD</span></div>
+    <div class="chip"><i class="fas fa-language"></i> <span>عربي · Français · English</span></div>
   </div>
 </div>
 
@@ -98,17 +103,17 @@
 <section class="sec" id="features">
   <div class="container">
     <div class="sec-head reveal">
-      <span class="kicker">Fonctionnalités</span>
-      <h2>Tout pour porter le Coran</h2>
-      <p>Une suite pensée pour la mémorisation, la révision et l'enseignement, du débutant au ḥāfiẓ.</p>
+      <span class="kicker" data-i18n="feat_kicker">Fonctionnalités</span>
+      <h2 data-i18n="feat_h2">Tout pour porter le Coran</h2>
+      <p data-i18n="feat_p">Une suite pensée pour la mémorisation, la révision et l'enseignement, du débutant au ḥāfiẓ.</p>
     </div>
     <div class="grid">
-      <div class="card reveal"><div class="ic"><i class="fas fa-book-open"></i></div><h3>Mushaf multi-riwaya</h3><p>Lisez le Coran en images haute qualité, avec plusieurs riwāyāt (Hafs, Warsh, Qālūn…). Touchez un verset pour interagir, marquer, écouter.</p></div>
-      <div class="card reveal"><div class="ic"><i class="fas fa-arrows-rotate"></i></div><h3>Révision intelligente</h3><p>Des plans de révision générés selon vos objectifs, avec segments quotidiens, répétitions (tekrar) et rappels — pour ancrer durablement ce que vous mémorisez.</p></div>
-      <div class="card reveal"><div class="ic"><i class="fas fa-spell-check"></i></div><h3>Détection d'erreurs Tajweed</h3><p>Marquez précisément les erreurs sur la page, par type de règle, avec commentaires et statistiques — idéal pour le suivi du tasmīʿ.</p></div>
-      <div class="card reveal"><div class="ic"><i class="fas fa-microphone-lines"></i></div><h3>Récitation & audio</h3><p>Écoutez des récitateurs, suivez le verset en surbrillance, enregistrez votre récitation et créez des playlists avec répétitions et boucles.</p></div>
-      <div class="card reveal"><div class="ic"><i class="fas fa-bullseye"></i></div><h3>Objectifs & statistiques</h3><p>Fixez des objectifs mensuels et annuels, suivez vos jours consécutifs, pages révisées et progression, en graphiques clairs.</p></div>
-      <div class="card reveal"><div class="ic"><i class="fas fa-cloud-arrow-up"></i></div><h3>Synchronisation sécurisée</h3><p>Retrouvez votre progression sur tous vos appareils grâce à une synchronisation cloud chiffrée — entièrement optionnelle.</p></div>
+      <div class="card reveal"><div class="ic"><i class="fas fa-book-open"></i></div><h3 data-i18n="f1_t">Mushaf multi-riwaya</h3><p data-i18n="f1_d">Lisez le Coran en images haute qualité, avec plusieurs riwāyāt (Hafs, Warsh, Qālūn…). Touchez un verset pour interagir, marquer, écouter.</p></div>
+      <div class="card reveal"><div class="ic"><i class="fas fa-arrows-rotate"></i></div><h3 data-i18n="f2_t">Révision intelligente</h3><p data-i18n="f2_d">Des plans de révision générés selon vos objectifs, avec segments quotidiens, répétitions (tekrar) et rappels — pour ancrer durablement ce que vous mémorisez.</p></div>
+      <div class="card reveal"><div class="ic"><i class="fas fa-spell-check"></i></div><h3 data-i18n="f3_t">Détection d'erreurs Tajweed</h3><p data-i18n="f3_d">Marquez précisément les erreurs sur la page, par type de règle, avec commentaires et statistiques — idéal pour le suivi du tasmīʿ.</p></div>
+      <div class="card reveal"><div class="ic"><i class="fas fa-microphone-lines"></i></div><h3 data-i18n="f4_t">Récitation & audio</h3><p data-i18n="f4_d">Écoutez des récitateurs, suivez le verset en surbrillance, enregistrez votre récitation et créez des playlists avec répétitions et boucles.</p></div>
+      <div class="card reveal"><div class="ic"><i class="fas fa-bullseye"></i></div><h3 data-i18n="f5_t">Objectifs & statistiques</h3><p data-i18n="f5_d">Fixez des objectifs mensuels et annuels, suivez vos jours consécutifs, pages révisées et progression, en graphiques clairs.</p></div>
+      <div class="card reveal"><div class="ic"><i class="fas fa-cloud-arrow-up"></i></div><h3 data-i18n="f6_t">Synchronisation sécurisée</h3><p data-i18n="f6_d">Retrouvez votre progression sur tous vos appareils grâce à une synchronisation cloud chiffrée — entièrement optionnelle.</p></div>
     </div>
   </div>
 </section>
@@ -118,14 +123,14 @@
   <div class="container">
     <div class="band reveal">
       <div>
-        <span class="kicker">Module École</span>
-        <h2>Enseignants & élèves, connectés</h2>
-        <p>Un espace complet pour les cercles de mémorisation : reliez vos élèves, créez des séances, corrigez à distance et communiquez en direct.</p>
+        <span class="kicker" data-i18n="ec_kicker">Module École</span>
+        <h2 data-i18n="ec_h2">Enseignants & élèves, connectés</h2>
+        <p data-i18n="ec_p">Un espace complet pour les cercles de mémorisation : reliez vos élèves, créez des séances, corrigez à distance et communiquez en direct.</p>
         <ul>
-          <li><i class="fas fa-user-check"></i> Reliez enseignant et élèves par un simple code, en toute confidentialité.</li>
-          <li><i class="fas fa-video"></i> Séances en direct (audio/vidéo) et appels 1-à-1.</li>
-          <li><i class="fas fa-pen-to-square"></i> Correction du tasmīʿ à distance : annotez la page de l'élève.</li>
-          <li><i class="fas fa-certificate"></i> Profils d'enseignants vérifiés (ijāza).</li>
+          <li><i class="fas fa-user-check"></i> <span data-i18n="ec_li1">Reliez enseignant et élèves par un simple code, en toute confidentialité.</span></li>
+          <li><i class="fas fa-video"></i> <span data-i18n="ec_li2">Séances en direct (audio/vidéo) et appels 1-à-1.</span></li>
+          <li><i class="fas fa-pen-to-square"></i> <span data-i18n="ec_li3">Correction du tasmīʿ à distance : annotez la page de l'élève.</span></li>
+          <li><i class="fas fa-certificate"></i> <span data-i18n="ec_li4">Profils d'enseignants vérifiés (ijāza).</span></li>
         </ul>
       </div>
       <div class="band-visual">
@@ -140,15 +145,15 @@
 <section class="sec" id="outils">
   <div class="container">
     <div class="sec-head reveal">
-      <span class="kicker">Outils du musulman</span>
-      <h2>Bien plus qu'un Mushaf</h2>
-      <p>Des outils authentiques du quotidien, intégrés avec soin.</p>
+      <span class="kicker" data-i18n="out_kicker">Outils du musulman</span>
+      <h2 data-i18n="out_h2">Bien plus qu'un Mushaf</h2>
+      <p data-i18n="out_p">Des outils authentiques du quotidien, intégrés avec soin.</p>
     </div>
     <div class="grid">
-      <div class="card reveal"><div class="ic"><i class="fas fa-compass"></i></div><h3>Boussole Qibla</h3><p>Une boussole animée pour trouver la direction de la prière où que vous soyez.</p></div>
-      <div class="card reveal"><div class="ic"><i class="fas fa-hands-praying"></i></div><h3>Athkar — Ḥiṣn al-Muslim</h3><p>La forteresse du musulman : des centaines d'invocations authentiques, avec lecteur et compteur immersif.</p></div>
-      <div class="card reveal"><div class="ic"><i class="fas fa-calendar-days"></i></div><h3>Calendrier hégirien</h3><p>Calendrier hijrī aligné sur la source officielle, avec les occasions religieuses mises en avant.</p></div>
-      <div class="card reveal"><div class="ic"><i class="fas fa-book-quran"></i></div><h3>Duʿāʾ & 40 hadiths</h3><p>Invocations du Coran et de la Sunna, et les 40 hadiths de l'imam an-Nawawī (AR/FR/EN).</p></div>
+      <div class="card reveal"><div class="ic"><i class="fas fa-compass"></i></div><h3 data-i18n="o1_t">Boussole Qibla</h3><p data-i18n="o1_d">Une boussole animée pour trouver la direction de la prière où que vous soyez.</p></div>
+      <div class="card reveal"><div class="ic"><i class="fas fa-hands-praying"></i></div><h3 data-i18n="o2_t">Athkar — Ḥiṣn al-Muslim</h3><p data-i18n="o2_d">La forteresse du musulman : des centaines d'invocations authentiques, avec lecteur et compteur immersif.</p></div>
+      <div class="card reveal"><div class="ic"><i class="fas fa-calendar-days"></i></div><h3 data-i18n="o3_t">Calendrier hégirien</h3><p data-i18n="o3_d">Calendrier hijrī aligné sur la source officielle, avec les occasions religieuses mises en avant.</p></div>
+      <div class="card reveal"><div class="ic"><i class="fas fa-book-quran"></i></div><h3 data-i18n="o4_t">Duʿāʾ & 40 hadiths</h3><p data-i18n="o4_d">Invocations du Coran et de la Sunna, et les 40 hadiths de l'imam an-Nawawī (AR/FR/EN).</p></div>
     </div>
   </div>
 </section>
@@ -157,42 +162,42 @@
 <section class="sec" id="tutoriels">
   <div class="container">
     <div class="sec-head reveal">
-      <span class="kicker">Tutoriels</span>
-      <h2>Apprenez l'application en vidéo</h2>
-      <p>Des tutoriels courts et pratiques, organisés par thème depuis notre chaîne YouTube — lecture épurée, sans suggestions extérieures.</p>
+      <span class="kicker" data-i18n="tu_kicker">Tutoriels</span>
+      <h2 data-i18n="tu_h2">Apprenez l'application en vidéo</h2>
+      <p data-i18n="tu_p">Des tutoriels courts et pratiques, organisés par thème depuis notre chaîne YouTube — lecture épurée, sans suggestions extérieures.</p>
     </div>
     <div class="tuto reveal">
       <div class="tuto-tabs">
-        <button class="tuto-tab active" data-pl="pl1">Premiers pas</button>
-        <button class="tuto-tab" data-pl="pl2">Lecture du Mushaf</button>
-        <button class="tuto-tab" data-pl="pl3">Audio &amp; écoute</button>
+        <button class="tuto-tab active" data-pl="pl1" data-i18n="tu_tab1">Premiers pas</button>
+        <button class="tuto-tab" data-pl="pl2" data-i18n="tu_tab2">Lecture du Mushaf</button>
+        <button class="tuto-tab" data-pl="pl3" data-i18n="tu_tab3">Audio &amp; écoute</button>
       </div>
       <div class="tuto-carousel">
         <button class="tuto-nav prev" aria-label="Vidéo précédente"><i class="fas fa-chevron-left"></i></button>
         <div class="tuto-track" data-pl="pl1" data-list="PLBt11na4hZsU">
-          <button class="tuto-card" data-video="HP2MM41r1-M" data-list="PLBt11na4hZsU"><img src="https://i.ytimg.com/vi/HP2MM41r1-M/mqdefault.jpg" alt="" loading="lazy"><span class="play"><i class="fas fa-play"></i></span><span class="t">Choisir le mode : Mushaf ou Muqra'a</span></button>
-          <button class="tuto-card" data-video="6zyL9JD8fcE" data-list="PLBt11na4hZsU"><img src="https://i.ytimg.com/vi/6zyL9JD8fcE/mqdefault.jpg" alt="" loading="lazy"><span class="play"><i class="fas fa-play"></i></span><span class="t">Marquer une erreur de Tajweed</span></button>
-          <button class="tuto-card" data-video="PdUCS89TV3g" data-list="PLBt11na4hZsU"><img src="https://i.ytimg.com/vi/PdUCS89TV3g/mqdefault.jpg" alt="" loading="lazy"><span class="play"><i class="fas fa-play"></i></span><span class="t">Modifier ou supprimer une erreur marquée</span></button>
-          <button class="tuto-card" data-video="yGeffZeXmbw" data-list="PLBt11na4hZsU"><img src="https://i.ytimg.com/vi/yGeffZeXmbw/mqdefault.jpg" alt="" loading="lazy"><span class="play"><i class="fas fa-play"></i></span><span class="t">La barre du haut : index des sourates &amp; enregistrement</span></button>
+          <button class="tuto-card" data-video="HP2MM41r1-M" data-list="PLBt11na4hZsU"><img src="https://i.ytimg.com/vi/HP2MM41r1-M/mqdefault.jpg" alt="" loading="lazy"><span class="play"><i class="fas fa-play"></i></span><span class="t" data-i18n="tv_HP2MM41r1-M">Choisir le mode : Mushaf ou Muqra'a</span></button>
+          <button class="tuto-card" data-video="6zyL9JD8fcE" data-list="PLBt11na4hZsU"><img src="https://i.ytimg.com/vi/6zyL9JD8fcE/mqdefault.jpg" alt="" loading="lazy"><span class="play"><i class="fas fa-play"></i></span><span class="t" data-i18n="tv_6zyL9JD8fcE">Marquer une erreur de Tajweed</span></button>
+          <button class="tuto-card" data-video="PdUCS89TV3g" data-list="PLBt11na4hZsU"><img src="https://i.ytimg.com/vi/PdUCS89TV3g/mqdefault.jpg" alt="" loading="lazy"><span class="play"><i class="fas fa-play"></i></span><span class="t" data-i18n="tv_PdUCS89TV3g">Modifier ou supprimer une erreur marquée</span></button>
+          <button class="tuto-card" data-video="yGeffZeXmbw" data-list="PLBt11na4hZsU"><img src="https://i.ytimg.com/vi/yGeffZeXmbw/mqdefault.jpg" alt="" loading="lazy"><span class="play"><i class="fas fa-play"></i></span><span class="t" data-i18n="tv_yGeffZeXmbw">La barre du haut : index des sourates &amp; enregistrement</span></button>
         </div>
         <div class="tuto-track" data-pl="pl2" data-list="PLSoPugY-qzNw" hidden>
-          <button class="tuto-card" data-video="9xfWtRjqiRY" data-list="PLSoPugY-qzNw"><img src="https://i.ytimg.com/vi/9xfWtRjqiRY/mqdefault.jpg" alt="" loading="lazy"><span class="play"><i class="fas fa-play"></i></span><span class="t">Créer un profil de lecture (mushaf)</span></button>
-          <button class="tuto-card" data-video="rD1psPhtAhI" data-list="PLSoPugY-qzNw"><img src="https://i.ytimg.com/vi/rD1psPhtAhI/mqdefault.jpg" alt="" loading="lazy"><span class="play"><i class="fas fa-play"></i></span><span class="t">Naviguer dans le Coran &amp; index des sourates</span></button>
-          <button class="tuto-card" data-video="aAJmNe-OBAc" data-list="PLSoPugY-qzNw"><img src="https://i.ytimg.com/vi/aAJmNe-OBAc/mqdefault.jpg" alt="" loading="lazy"><span class="play"><i class="fas fa-play"></i></span><span class="t">Marquer une erreur en double-tapant le verset</span></button>
-          <button class="tuto-card" data-video="mXBjPZe_Tpw" data-list="PLSoPugY-qzNw"><img src="https://i.ytimg.com/vi/mXBjPZe_Tpw/mqdefault.jpg" alt="" loading="lazy"><span class="play"><i class="fas fa-play"></i></span><span class="t">Changer de Mushaf (riwaya) en lecture</span></button>
-          <button class="tuto-card" data-video="ldvnrUMILPk" data-list="PLSoPugY-qzNw"><img src="https://i.ytimg.com/vi/ldvnrUMILPk/mqdefault.jpg" alt="" loading="lazy"><span class="play"><i class="fas fa-play"></i></span><span class="t">Ouvrir le mode Récitation</span></button>
+          <button class="tuto-card" data-video="9xfWtRjqiRY" data-list="PLSoPugY-qzNw"><img src="https://i.ytimg.com/vi/9xfWtRjqiRY/mqdefault.jpg" alt="" loading="lazy"><span class="play"><i class="fas fa-play"></i></span><span class="t" data-i18n="tv_9xfWtRjqiRY">Créer un profil de lecture (mushaf)</span></button>
+          <button class="tuto-card" data-video="rD1psPhtAhI" data-list="PLSoPugY-qzNw"><img src="https://i.ytimg.com/vi/rD1psPhtAhI/mqdefault.jpg" alt="" loading="lazy"><span class="play"><i class="fas fa-play"></i></span><span class="t" data-i18n="tv_rD1psPhtAhI">Naviguer dans le Coran &amp; index des sourates</span></button>
+          <button class="tuto-card" data-video="aAJmNe-OBAc" data-list="PLSoPugY-qzNw"><img src="https://i.ytimg.com/vi/aAJmNe-OBAc/mqdefault.jpg" alt="" loading="lazy"><span class="play"><i class="fas fa-play"></i></span><span class="t" data-i18n="tv_aAJmNe-OBAc">Marquer une erreur en double-tapant le verset</span></button>
+          <button class="tuto-card" data-video="mXBjPZe_Tpw" data-list="PLSoPugY-qzNw"><img src="https://i.ytimg.com/vi/mXBjPZe_Tpw/mqdefault.jpg" alt="" loading="lazy"><span class="play"><i class="fas fa-play"></i></span><span class="t" data-i18n="tv_mXBjPZe_Tpw">Changer de Mushaf (riwaya) en lecture</span></button>
+          <button class="tuto-card" data-video="ldvnrUMILPk" data-list="PLSoPugY-qzNw"><img src="https://i.ytimg.com/vi/ldvnrUMILPk/mqdefault.jpg" alt="" loading="lazy"><span class="play"><i class="fas fa-play"></i></span><span class="t" data-i18n="tv_ldvnrUMILPk">Ouvrir le mode Récitation</span></button>
         </div>
         <div class="tuto-track" data-pl="pl3" data-list="PLfyMsVJfy2Lc" hidden>
-          <button class="tuto-card" data-video="EoXwdDgtnXw" data-list="PLfyMsVJfy2Lc"><img src="https://i.ytimg.com/vi/EoXwdDgtnXw/mqdefault.jpg" alt="" loading="lazy"><span class="play"><i class="fas fa-play"></i></span><span class="t">Choisir un récitateur et l'ajouter en favori</span></button>
-          <button class="tuto-card" data-video="SvZA6WNM-IE" data-list="PLfyMsVJfy2Lc"><img src="https://i.ytimg.com/vi/SvZA6WNM-IE/mqdefault.jpg" alt="" loading="lazy"><span class="play"><i class="fas fa-play"></i></span><span class="t">Activer la lecture continue du Coran</span></button>
-          <button class="tuto-card" data-video="8TnrUOLprr8" data-list="PLfyMsVJfy2Lc"><img src="https://i.ytimg.com/vi/8TnrUOLprr8/mqdefault.jpg" alt="" loading="lazy"><span class="play"><i class="fas fa-play"></i></span><span class="t">Créer une playlist de sourates</span></button>
-          <button class="tuto-card" data-video="QMMPWYP6lGE" data-list="PLfyMsVJfy2Lc"><img src="https://i.ytimg.com/vi/QMMPWYP6lGE/mqdefault.jpg" alt="" loading="lazy"><span class="play"><i class="fas fa-play"></i></span><span class="t">Régler la vitesse &amp; boucler la lecture</span></button>
-          <button class="tuto-card" data-video="3yvMCMeT5uk" data-list="PLfyMsVJfy2Lc"><img src="https://i.ytimg.com/vi/3yvMCMeT5uk/mqdefault.jpg" alt="" loading="lazy"><span class="play"><i class="fas fa-play"></i></span><span class="t">Télécharger des sourates (écoute hors-ligne)</span></button>
-          <button class="tuto-card" data-video="g9PiOKtESU8" data-list="PLfyMsVJfy2Lc"><img src="https://i.ytimg.com/vi/g9PiOKtESU8/mqdefault.jpg" alt="" loading="lazy"><span class="play"><i class="fas fa-play"></i></span><span class="t">Écouter et suivre le texte en temps réel</span></button>
+          <button class="tuto-card" data-video="EoXwdDgtnXw" data-list="PLfyMsVJfy2Lc"><img src="https://i.ytimg.com/vi/EoXwdDgtnXw/mqdefault.jpg" alt="" loading="lazy"><span class="play"><i class="fas fa-play"></i></span><span class="t" data-i18n="tv_EoXwdDgtnXw">Choisir un récitateur et l'ajouter en favori</span></button>
+          <button class="tuto-card" data-video="SvZA6WNM-IE" data-list="PLfyMsVJfy2Lc"><img src="https://i.ytimg.com/vi/SvZA6WNM-IE/mqdefault.jpg" alt="" loading="lazy"><span class="play"><i class="fas fa-play"></i></span><span class="t" data-i18n="tv_SvZA6WNM-IE">Activer la lecture continue du Coran</span></button>
+          <button class="tuto-card" data-video="8TnrUOLprr8" data-list="PLfyMsVJfy2Lc"><img src="https://i.ytimg.com/vi/8TnrUOLprr8/mqdefault.jpg" alt="" loading="lazy"><span class="play"><i class="fas fa-play"></i></span><span class="t" data-i18n="tv_8TnrUOLprr8">Créer une playlist de sourates</span></button>
+          <button class="tuto-card" data-video="QMMPWYP6lGE" data-list="PLfyMsVJfy2Lc"><img src="https://i.ytimg.com/vi/QMMPWYP6lGE/mqdefault.jpg" alt="" loading="lazy"><span class="play"><i class="fas fa-play"></i></span><span class="t" data-i18n="tv_QMMPWYP6lGE">Régler la vitesse &amp; boucler la lecture</span></button>
+          <button class="tuto-card" data-video="3yvMCMeT5uk" data-list="PLfyMsVJfy2Lc"><img src="https://i.ytimg.com/vi/3yvMCMeT5uk/mqdefault.jpg" alt="" loading="lazy"><span class="play"><i class="fas fa-play"></i></span><span class="t" data-i18n="tv_3yvMCMeT5uk">Télécharger des sourates (écoute hors-ligne)</span></button>
+          <button class="tuto-card" data-video="g9PiOKtESU8" data-list="PLfyMsVJfy2Lc"><img src="https://i.ytimg.com/vi/g9PiOKtESU8/mqdefault.jpg" alt="" loading="lazy"><span class="play"><i class="fas fa-play"></i></span><span class="t" data-i18n="tv_g9PiOKtESU8">Écouter et suivre le texte en temps réel</span></button>
         </div>
         <button class="tuto-nav next" aria-label="Vidéo suivante"><i class="fas fa-chevron-right"></i></button>
       </div>
-      <p class="tuto-links"><a class="tuto-yt" href="https://www.youtube.com/playlist?list=PLBt11na4hZsU" target="_blank" rel="noopener">Voir la playlist sur YouTube <i class="fas fa-arrow-up-right-from-square"></i></a> · <a href="https://www.youtube.com/@ye0ra7kjzd7f" target="_blank" rel="noopener">Chaîne Hamil-Al-Quran</a></p>
+      <p class="tuto-links"><a class="tuto-yt" href="https://www.youtube.com/playlist?list=PLBt11na4hZsU" target="_blank" rel="noopener" data-i18n="tu_yt">Voir la playlist sur YouTube <i class="fas fa-arrow-up-right-from-square"></i></a> · <a href="https://www.youtube.com/@ye0ra7kjzd7f" target="_blank" rel="noopener" data-i18n="tu_channel">Chaîne Hamil-Al-Quran</a></p>
     </div>
   </div>
 </section>
@@ -201,9 +206,9 @@
 <section class="sec" id="apercu">
   <div class="container">
     <div class="sec-head reveal">
-      <span class="kicker">Aperçu</span>
-      <h2>Une interface soignée</h2>
-      <p>Des thèmes clairs et sombres, une lecture confortable, une expérience fluide.</p>
+      <span class="kicker" data-i18n="ap_kicker">Aperçu</span>
+      <h2 data-i18n="ap_h2">Une interface soignée</h2>
+      <p data-i18n="ap_p">Des thèmes clairs et sombres, une lecture confortable, une expérience fluide.</p>
     </div>
   </div>
   <div class="gallery reveal">
@@ -222,22 +227,22 @@
 <section class="sec" id="download">
   <div class="container dl">
     <div class="sec-head reveal" style="margin-bottom:20px">
-      <span class="kicker">Télécharger</span>
-      <h2>Commencez dès aujourd'hui</h2>
-      <p>Gratuit, sur iPhone, iPad, Android et Windows.</p>
+      <span class="kicker" data-i18n="dl_kicker">Télécharger</span>
+      <h2 data-i18n="dl_h2">Commencez dès aujourd'hui</h2>
+      <p data-i18n="dl_p">Gratuit, sur iPhone, iPad, Android et Windows.</p>
     </div>
     <div class="badges reveal">
       <a class="badge" href="https://apps.apple.com/app/id6749209998" target="_blank" rel="noopener">
-        <i class="fab fa-apple"></i><div><div class="b-sub">Télécharger sur</div><div class="b-main">App Store</div></div>
+        <i class="fab fa-apple"></i><div><div class="b-sub" data-i18n="dl_ap_sub">Télécharger sur</div><div class="b-main">App Store</div></div>
       </a>
       <a class="badge" href="https://play.google.com/store/apps/details?id=com.tajweed.quran_tajweed" target="_blank" rel="noopener">
-        <i class="fab fa-google-play"></i><div><div class="b-sub">Disponible sur</div><div class="b-main">Google Play</div></div>
+        <i class="fab fa-google-play"></i><div><div class="b-sub" data-i18n="dl_gp_sub">Disponible sur</div><div class="b-main">Google Play</div></div>
       </a>
       <a class="badge" href="https://github.com/Yahia-ELECHI/hamil-al-quran-website/releases/download/v2.0.4/HamilAlQuran_Setup_2.0.4.exe">
-        <i class="fab fa-windows"></i><div><div class="b-sub">Télécharger pour</div><div class="b-main">Windows</div></div>
+        <i class="fab fa-windows"></i><div><div class="b-sub" data-i18n="dl_win_sub">Télécharger pour</div><div class="b-main">Windows</div></div>
       </a>
     </div>
-    <p class="dl-note">Gratuit et sans publicité — l'installateur Windows (.exe) est un téléchargement direct.</p>
+    <p class="dl-note" data-i18n="dl_note">Gratuit et sans publicité — l'installateur Windows (.exe) est un téléchargement direct.</p>
   </div>
 </section>
 
@@ -245,15 +250,15 @@
 <section class="sec" id="faq">
   <div class="container">
     <div class="sec-head reveal">
-      <span class="kicker">FAQ</span>
-      <h2>Questions fréquentes</h2>
+      <span class="kicker" data-i18n="faq_kicker">FAQ</span>
+      <h2 data-i18n="faq_h2">Questions fréquentes</h2>
     </div>
     <div class="faq">
-      <details class="qa reveal"><summary>L'application est-elle gratuite ?<i class="fas fa-plus plus"></i></summary><div class="a">Oui, Hamil Al-Quran est entièrement gratuite, sans publicité.</div></details>
-      <details class="qa reveal"><summary>Faut-il un compte ou internet ?<i class="fas fa-plus plus"></i></summary><div class="a">Non. L'application fonctionne hors-ligne, sans compte. La création d'un compte est optionnelle : elle sert uniquement à synchroniser votre progression entre vos appareils.</div></details>
-      <details class="qa reveal"><summary>Mes données sont-elles protégées ?<i class="fas fa-plus plus"></i></summary><div class="a">Oui. Sans compte, vos données restent sur votre appareil. Avec un compte, elles sont chiffrées, cloisonnées et hébergées dans l'Union européenne. Vous pouvez supprimer votre compte et toutes vos données à tout moment depuis l'application. Voir notre <a href="privacy.html" style="color:var(--gold)">politique de confidentialité</a>.</div></details>
-      <details class="qa reveal"><summary>Quelles riwāyāt sont disponibles ?<i class="fas fa-plus plus"></i></summary><div class="a">Ḥafṣ est inclus, et d'autres transmissions (Warsh, Qālūn…) sont téléchargeables à la demande.</div></details>
-      <details class="qa reveal"><summary>Convient-elle aux enfants ?<i class="fas fa-plus plus"></i></summary><div class="a">Oui, sous la responsabilité d'un parent ou tuteur. Les profils permettent de suivre la mémorisation de chaque membre de la famille.</div></details>
+      <details class="qa reveal"><summary><span data-i18n="faq_q1">L'application est-elle gratuite ?</span><i class="fas fa-plus plus"></i></summary><div class="a" data-i18n="faq_a1">Oui, Hamil Al-Quran est entièrement gratuite, sans publicité.</div></details>
+      <details class="qa reveal"><summary><span data-i18n="faq_q2">Faut-il un compte ou internet ?</span><i class="fas fa-plus plus"></i></summary><div class="a" data-i18n="faq_a2">Non. L'application fonctionne hors-ligne, sans compte. La création d'un compte est optionnelle : elle sert uniquement à synchroniser votre progression entre vos appareils.</div></details>
+      <details class="qa reveal"><summary><span data-i18n="faq_q3">Mes données sont-elles protégées ?</span><i class="fas fa-plus plus"></i></summary><div class="a" data-i18n="faq_a3">Oui. Sans compte, vos données restent sur votre appareil. Avec un compte, elles sont chiffrées, cloisonnées et hébergées dans l'Union européenne. Vous pouvez supprimer votre compte et toutes vos données à tout moment depuis l'application. Voir notre <a href="privacy.html">politique de confidentialité</a>.</div></details>
+      <details class="qa reveal"><summary><span data-i18n="faq_q4">Quelles riwāyāt sont disponibles ?</span><i class="fas fa-plus plus"></i></summary><div class="a" data-i18n="faq_a4">Ḥafṣ est inclus, et d'autres transmissions (Warsh, Qālūn…) sont téléchargeables à la demande.</div></details>
+      <details class="qa reveal"><summary><span data-i18n="faq_q5">Convient-elle aux enfants ?</span><i class="fas fa-plus plus"></i></summary><div class="a" data-i18n="faq_a5">Oui, sous la responsabilité d'un parent ou tuteur. Les profils permettent de suivre la mémorisation de chaque membre de la famille.</div></details>
     </div>
   </div>
 </section>
@@ -264,43 +269,44 @@
     <div class="f-grid">
       <div>
         <a href="#home" class="brand"><img src="assets/logo.png" alt="" style="width:40px"><span class="ar">حَامِلُ الْقُرْآنْ</span></a>
-        <p>L'application moderne de mémorisation et de révision du Coran, pour toute la famille et les cercles d'apprentissage.</p>
+        <p data-i18n="ft_about">L'application moderne de mémorisation et de révision du Coran, pour toute la famille et les cercles d'apprentissage.</p>
       </div>
       <div>
-        <h4>Navigation</h4>
+        <h4 data-i18n="ft_nav">Navigation</h4>
         <ul>
-          <li><a href="#features">Fonctionnalités</a></li>
-          <li><a href="#ecole">Module École</a></li>
-          <li><a href="#outils">Outils du musulman</a></li>
-          <li><a href="#tutoriels">Tutoriels</a></li>
-          <li><a href="#download">Télécharger</a></li>
+          <li><a href="#features" data-i18n="nav_features">Fonctionnalités</a></li>
+          <li><a href="#ecole" data-i18n="ft_ecole">Module École</a></li>
+          <li><a href="#outils" data-i18n="ft_outils">Outils du musulman</a></li>
+          <li><a href="#tutoriels" data-i18n="nav_tutos">Tutoriels</a></li>
+          <li><a href="#download" data-i18n="nav_dl">Télécharger</a></li>
         </ul>
       </div>
       <div>
-        <h4>Ressources</h4>
+        <h4 data-i18n="ft_res">Ressources</h4>
         <ul>
-          <li><a href="about.html">À propos</a></li>
-          <li><a href="faq.html">FAQ</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="privacy.html">Confidentialité</a></li>
+          <li><a href="about.html" data-i18n="ft_apropos">À propos</a></li>
+          <li><a href="faq.html" data-i18n="nav_faq">FAQ</a></li>
+          <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+          <li><a href="privacy.html" data-i18n="ft_privacy">Confidentialité</a></li>
         </ul>
       </div>
     </div>
-    <div class="f-bottom">© 2026 حَامِلُ الْقُرْآنْ — Hamil Al-Quran. Tous droits réservés.</div>
+    <div class="f-bottom" data-i18n="ft_copy">© 2026 حَامِلُ الْقُرْآنْ — Hamil Al-Quran. Tous droits réservés.</div>
   </div>
 </footer>
 
-<!-- Lecteur vidéo (tutoriels) : youtube-nocookie + rel=0 + contexte playlist -->
+<!-- Lecteur vidéo (tutoriels) : vidéos auto-hébergées, lecteur natif -->
 <div class="tuto-modal" hidden>
   <div class="tuto-modal-box">
     <div class="tuto-modal-bar">
-      <a class="tuto-open-yt" href="#" target="_blank" rel="noopener"><i class="fab fa-youtube"></i> Ouvrir dans YouTube</a>
+      <a class="tuto-open-yt" href="#" target="_blank" rel="noopener" data-i18n="tu_open"><i class="fab fa-youtube"></i> Ouvrir dans YouTube</a>
       <button class="tuto-close" aria-label="Fermer"><i class="fas fa-xmark"></i></button>
     </div>
     <div class="tuto-player"></div>
   </div>
 </div>
 
+<script src="js/i18n.js"></script>
 <script src="js/site.js"></script>
 </body>
 </html>
