@@ -35,6 +35,10 @@ Fragile spots learned the hard way:
 
 `js/contact-form.js` expects this exact DOM on `contact.html`: `form.contact-form#contactForm`, fields named/id'd `name`/`email`/`subject`/`message`, error spans `#<field>-error`, counter `#message-count`. It reads `document.documentElement.lang` for message language. `js/emailjs-config.js` resolves `EMAILJS_SERVICE_ID`/`EMAILJS_TEMPLATE_ID`/`EMAILJS_PUBLIC_KEY` from Cloudflare Pages env vars, falling back to hardcoded dev values.
 
+### Tutorials carousel (`index.html#tutoriels`)
+
+One tab per YouTube playlist of the Hamil-Al-Quran channel (`@ye0ra7kjzd7f`); cards are hardcoded `<button class="tuto-card" data-video=… data-list=…>` with `i.ytimg.com` thumbnails. Behavior lives in `js/site.js`: coverflow scale/fade, 5s auto-advance (paused on interaction, mirrors the app's `tutorial_video_carousel.dart`), and a modal that instantiates a `youtube-nocookie.com/embed/<id>?list=<playlist>&rel=0` iframe on click (removed on close to stop playback) — the `list` context + `rel=0` keep end-of-video suggestions on the owner's channel. To add a video: add one card button (video ID + playlist ID). Playlist video lists can be re-fetched without an API key via `https://www.youtube.com/feeds/videos.xml?playlist_id=<ID>` (15 most recent). **The channel's videos must have "Allow embedding" enabled in YouTube Studio**, else the player shows "Vidéo non disponible". Embeds error out on `file://` pages (missing referer, error 153) — test over `http://localhost`.
+
 ### Download links
 
 Store badges in `index.html#download` are plain `<a href>` links. The Windows link embeds the release version (`releases/download/v2.0.4/HamilAlQuran_Setup_2.0.4.exe`) — shipping a new installer means uploading the `.exe` to a GitHub Release and updating that one href. `*.exe` is gitignored; the installer in the repo root is distributed via Releases, never committed.
