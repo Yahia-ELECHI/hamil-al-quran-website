@@ -30,7 +30,7 @@ fr: {
   trust_sync: "Sync cloud optionnelle", trust_rgpd: "Conforme RGPD",
 
   // Fonctionnalités
-  feat_kicker: "Fonctionnalités", feat_h2: "Tout pour rendre le Coran plus proche de ton cœur",
+  feat_kicker: "Fonctionnalités", feat_h2: "Tout pour rendre le Coran plus proche de ton coeur",
   feat_p: "Une suite pensée pour la mémorisation, la révision et l'enseignement, du débutant au ḥāfiẓ.",
   f1_t: "Mushaf multi-riwaya",
   f1_d: "Lisez le Coran en images haute qualité, avec plusieurs riwāyāt (Hafs, Warsh, Qālūn…). Touchez un verset pour interagir, marquer, écouter.",
