@@ -30,7 +30,7 @@ fr: {
   trust_sync: "Sync cloud optionnelle", trust_rgpd: "Conforme RGPD",
 
   // Fonctionnalités
-  feat_kicker: "Fonctionnalités", feat_h2: "Tout pour porter le Coran",
+  feat_kicker: "Fonctionnalités", feat_h2: "Tout pour rendre le Coran plus proche de ton cœur",
   feat_p: "Une suite pensée pour la mémorisation, la révision et l'enseignement, du débutant au ḥāfiẓ.",
   f1_t: "Mushaf multi-riwaya",
   f1_d: "Lisez le Coran en images haute qualité, avec plusieurs riwāyāt (Hafs, Warsh, Qālūn…). Touchez un verset pour interagir, marquer, écouter.",
@@ -259,7 +259,7 @@ en: {
   trust_free: "Free", trust_offline: "Works offline",
   trust_sync: "Optional cloud sync", trust_rgpd: "GDPR compliant",
 
-  feat_kicker: "Features", feat_h2: "Everything to carry the Quran",
+  feat_kicker: "Features", feat_h2: "Everything to bring the Quran closer to your heart",
   feat_p: "A suite designed for memorization, revision and teaching, from beginner to ḥāfiẓ.",
   f1_t: "Multi-riwaya Mushaf",
   f1_d: "Read the Quran in high-quality page images, in several riwāyāt (Ḥafṣ, Warsh, Qālūn…). Tap a verse to interact, mark or listen.",
@@ -477,7 +477,7 @@ ar: {
   trust_free: "مجاني", trust_offline: "يعمل دون اتصال",
   trust_sync: "مزامنة سحابية اختيارية", trust_rgpd: "متوافق مع GDPR",
 
-  feat_kicker: "المميزات", feat_h2: "كل ما تحتاجه لحمل القرآن",
+  feat_kicker: "المميزات", feat_h2: "كل ما يقرّب القرآن من قلبك",
   feat_p: "منظومة مصممة للحفظ والمراجعة والتعليم، من المبتدئ إلى الحافظ.",
   f1_t: "مصحف متعدد الروايات",
   f1_d: "اقرأ القرآن بصور صفحات عالية الجودة وبعدة روايات (حفص، ورش، قالون…). المس الآية للتفاعل أو التعليم أو الاستماع.",
@@ -499,7 +499,7 @@ ar: {
   ec_li3: "تصحيح التسميع عن بُعد: علّق على صفحة الطالب.",
   ec_li4: "ملفات معلمين موثّقة (إجازة).",
 
-  out_kicker: "أدوات المسلم", out_h2: "أكثر من مجرد مصحف",
+  out_kicker: "أدوات المسلم", out_h2: "المصحف وأكثر",
   out_p: "أدوات يومية أصيلة، مدمجة بعناية.",
   o1_t: "بوصلة القبلة",
   o1_d: "بوصلة متحركة لمعرفة اتجاه الصلاة أينما كنت.",
