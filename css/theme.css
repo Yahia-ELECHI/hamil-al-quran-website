@@ -189,8 +189,10 @@ section{position:relative;z-index:1}
 .tuto-modal-bar .tuto-open-yt:hover{color:var(--gold)}
 .tuto-close{width:40px;height:40px;border-radius:50%;border:1px solid var(--border);background:var(--glass);color:var(--ink);cursor:pointer;font-size:1rem;display:grid;place-items:center;transition:.2s}
 .tuto-close:hover{border-color:var(--border-gold);color:var(--gold)}
-.tuto-player{position:relative;aspect-ratio:16/9;border-radius:18px;overflow:hidden;border:1px solid var(--border);background:#000;box-shadow:var(--shadow)}
-.tuto-player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.tuto-player{display:grid;place-items:center}
+.tuto-player video{display:block;max-width:100%;max-height:min(78vh,780px);border-radius:18px;border:1px solid var(--border);background:#000;box-shadow:var(--shadow)}
+.tuto-error{background:var(--glass);border:1px solid var(--border);border-radius:14px;padding:20px 24px;color:var(--ink-70)}
+.tuto-error a{color:var(--gold);font-weight:600}
 
 /* Footer */
 .footer{border-top:1px solid var(--border);margin-top:60px;padding:56px 0 30px}

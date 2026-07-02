@@ -76,18 +76,22 @@ if(tuto){
     restartAuto();
   }));
 
-  // Lecteur modal
+  // Lecteur modal — vidéos auto-hébergées (assets/tutos/<id>.mp4), lecteur
+  // natif comme dans l'app : zéro iframe YouTube, zéro pub, zéro suggestion.
   const modal=document.querySelector('.tuto-modal');
   const holder=modal.querySelector('.tuto-player');
   const ytLink=modal.querySelector('.tuto-open-yt');
   function openVideo(v,list){
     holder.innerHTML='';
-    const f=document.createElement('iframe');
-    f.src=`https://www.youtube-nocookie.com/embed/${v}?list=${list}&rel=0&autoplay=1&playsinline=1&color=white`;
-    f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';
-    f.allowFullscreen=true;
-    f.title='Tutoriel Hamil Al-Quran';
-    holder.appendChild(f);
+    const vid=document.createElement('video');
+    vid.src=`assets/tutos/${v}.mp4`;
+    vid.poster=`https://i.ytimg.com/vi/${v}/hqdefault.jpg`;
+    vid.controls=true;
+    vid.autoplay=true;
+    vid.playsInline=true;
+    vid.setAttribute('controlsList','nodownload');
+    vid.onerror=()=>{holder.innerHTML=`<p class="tuto-error">Vidéo indisponible ici — <a href="https://www.youtube.com/watch?v=${v}&list=${list}" target="_blank" rel="noopener">regarder sur YouTube</a>.</p>`};
+    holder.appendChild(vid);
     ytLink.href=`https://www.youtube.com/watch?v=${v}&list=${list}`;
     modal.hidden=false;
     document.body.style.overflow='hidden';
