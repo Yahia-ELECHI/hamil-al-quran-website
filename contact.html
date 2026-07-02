@@ -1,140 +1,153 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" dir="ltr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - حَامِلُ الْقُرْآنْ</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Contactez l'équipe de حَامِلُ الْقُرْآنْ (Hamil Al-Quran) : support technique, suggestions ou toute autre question.">
+<meta name="theme-color" content="#0b0a2a">
+
+<title>Contact — حَامِلُ الْقُرْآنْ | Hamil Al-Quran</title>
+
+<link rel="icon" href="assets/logo.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Amiri:wght@400;700&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/theme.css">
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-content">
-                <div class="app-logo-circle">
-                    <div class="logo-content">
-                        <i class="fas fa-book-open"></i>
-                        <span class="app-name-arabic" lang="ar">حَامِلُ الْقُرْآنْ</span>
-                    </div>
-                </div>
-                
-                <div class="navbar-right">
-                    <div class="language-selector">
-                        <button class="lang-btn" data-lang="fr">🇫🇷</button>
-                        <button class="lang-btn active" data-lang="en">🇺🇸</button>
-                        <button class="lang-btn" data-lang="ar">🇸🇦</button>
-                    </div>
-                </div>
-            </div>
+<div class="bg"></div><div class="orb a"></div><div class="orb b"></div><div class="orb c"></div><div class="pattern"></div>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="nav-in">
+    <a href="index.html" class="brand"><img src="assets/logo.png" alt="Hamil Al-Quran"><span class="ar">حَامِلُ الْقُرْآنْ</span></a>
+    <div class="nav-links" id="navlinks">
+      <a href="index.html#features">Fonctionnalités</a>
+      <a href="index.html#ecole">École</a>
+      <a href="index.html#outils">Outils</a>
+      <a href="faq.html">FAQ</a>
+      <a href="index.html#download" class="nav-cta">Télécharger</a>
+    </div>
+    <div class="burger" id="burger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<!-- EN-TÊTE -->
+<section class="page-head">
+  <div class="container">
+    <span class="kicker">Contact</span>
+    <h1>Nous contacter</h1>
+    <p>Nous sommes là pour vous aider. Une question, un problème, une idée&nbsp;? Écrivez-nous.</p>
+  </div>
+</section>
+
+<!-- CONTENU -->
+<section class="page-main">
+  <div class="container contact-grid">
+    <div class="contact-side">
+      <div class="card reveal">
+        <div class="ic"><i class="fas fa-envelope"></i></div>
+        <h3>Email</h3>
+        <p>Envoyez-nous un message et nous vous répondrons rapidement.</p>
+        <a href="mailto:contact@hamil-al-quran.com" class="link">contact@hamil-al-quran.com</a>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><i class="fas fa-comments"></i></div>
+        <h3>Support technique</h3>
+        <p>Besoin d'aide avec l'application&nbsp;? Consultez d'abord notre FAQ, la réponse s'y trouve peut-être déjà.</p>
+        <a href="faq.html" class="link">Voir la FAQ</a>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><i class="fas fa-lightbulb"></i></div>
+        <h3>Suggestions</h3>
+        <p>Vous avez des idées pour améliorer l'application&nbsp;? Partagez-les avec nous.</p>
+        <a href="mailto:suggestions@hamil-al-quran.com" class="link">suggestions@hamil-al-quran.com</a>
+      </div>
+    </div>
+
+    <div class="panel form-card reveal">
+      <h2>Envoyez-nous un message</h2>
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="form-group">
+          <label for="name">Nom</label>
+          <input type="text" id="name" name="name" required minlength="2" maxlength="50"
+                 placeholder="Votre nom complet">
+          <span class="field-error" id="name-error"></span>
         </div>
-    </nav>
 
-    <!-- Contact Content -->
-    <section class="page-content">
-        <div class="container">
-            <div class="page-header">
-                <h1 class="page-title" data-i18n="contact-title">Contact</h1>
-                <p class="page-description" data-i18n="contact-subtitle">
-                    Nous sommes là pour vous aider. N'hésitez pas à nous contacter.
-                </p>
-            </div>
-
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <div class="contact-card">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <h3 data-i18n="contact-email-title">Email</h3>
-                        <p data-i18n="contact-email-desc">Envoyez-nous un message et nous vous répondrons rapidement</p>
-                        <a href="mailto:contact@hamil-al-quran.com" class="contact-link">contact@hamil-al-quran.com</a>
-                    </div>
-
-                    <div class="contact-card">
-                        <div class="contact-icon">
-                            <i class="fas fa-comments"></i>
-                        </div>
-                        <h3 data-i18n="contact-support-title">Support Technique</h3>
-                        <p data-i18n="contact-support-desc">Besoin d'aide avec l'application ? Consultez notre FAQ ou contactez-nous</p>
-                        <a href="faq.html" class="contact-link" data-i18n="contact-faq-link">Voir la FAQ</a>
-                    </div>
-
-                    <div class="contact-card">
-                        <div class="contact-icon">
-                            <i class="fas fa-book-quran"></i>
-                        </div>
-                        <h3 data-i18n="contact-suggestions-title">Suggestions</h3>
-                        <p data-i18n="contact-suggestions-desc">Vous avez des idées pour améliorer l'application ? Partagez-les avec nous</p>
-                        <a href="mailto:suggestions@hamil-al-quran.com" class="contact-link">suggestions@hamil-al-quran.com</a>
-                    </div>
-                </div>
-
-                <div class="contact-form-container">
-                    <div class="contact-form-card">
-                        <h2 data-i18n="contact-form-title">Envoyez-nous un message</h2>
-                        <form class="contact-form" id="contactForm" novalidate>
-                            <div class="form-group">
-                                <label for="name" data-i18n="contact-form-name">Nom</label>
-                                <input type="text" id="name" name="name" required minlength="2" maxlength="50" 
-                                       placeholder="Votre nom complet">
-                                <span class="field-error" id="name-error"></span>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="email" data-i18n="contact-form-email">Email</label>
-                                <input type="email" id="email" name="email" required maxlength="100"
-                                       placeholder="votre.email@exemple.com">
-                                <span class="field-error" id="email-error"></span>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="subject" data-i18n="contact-form-subject">Sujet</label>
-                                <select id="subject" name="subject" required>
-                                    <option value="" data-i18n="contact-form-subject-select">Sélectionnez un sujet</option>
-                                    <option value="support" data-i18n="contact-form-subject-support">Support technique</option>
-                                    <option value="suggestion" data-i18n="contact-form-subject-suggestion">Suggestion</option>
-                                    <option value="bug" data-i18n="contact-form-subject-bug">Signalement de bug</option>
-                                    <option value="other" data-i18n="contact-form-subject-other">Autre</option>
-                                </select>
-                                <span class="field-error" id="subject-error"></span>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="message" data-i18n="contact-form-message">Message</label>
-                                <textarea id="message" name="message" rows="6" required minlength="10" maxlength="1000"
-                                          placeholder="Décrivez votre demande en détail..."></textarea>
-                                <span class="field-error" id="message-error"></span>
-                                <div class="character-count">
-                                    <span id="message-count">0</span>/1000
-                                </div>
-                            </div>
-                            
-                            <button type="submit" class="btn btn-primary" data-i18n="contact-form-send">
-                                <i class="fas fa-paper-plane"></i>
-                                Envoyer le message
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Retour à l'accueil -->
-            <div class="page-footer">
-                <a href="index.html" class="btn-back-home" data-i18n="back-to-home">
-                    <i class="fas fa-arrow-left"></i>
-                    Retour à l'accueil
-                </a>
-            </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required maxlength="100"
+                 placeholder="votre.email@exemple.com">
+          <span class="field-error" id="email-error"></span>
         </div>
-    </section>
 
-    <!-- Scripts -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script src="js/i18n.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/emailjs-config.js"></script>
-    <script src="js/contact-form.js"></script>
+        <div class="form-group">
+          <label for="subject">Sujet</label>
+          <select id="subject" name="subject" required>
+            <option value="">Sélectionnez un sujet</option>
+            <option value="support">Support technique</option>
+            <option value="suggestion">Suggestion</option>
+            <option value="bug">Signalement de bug</option>
+            <option value="other">Autre</option>
+          </select>
+          <span class="field-error" id="subject-error"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" required minlength="10" maxlength="1000"
+                    placeholder="Décrivez votre demande en détail..."></textarea>
+          <span class="field-error" id="message-error"></span>
+          <div class="character-count">
+            <span id="message-count">0</span>/1000
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-gold">
+          <i class="fas fa-paper-plane"></i>
+          Envoyer le message
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="f-grid">
+      <div>
+        <a href="index.html" class="brand"><img src="assets/logo.png" alt="" style="width:40px"><span class="ar">حَامِلُ الْقُرْآنْ</span></a>
+        <p>L'application moderne de mémorisation et de révision du Coran, pour toute la famille et les cercles d'apprentissage.</p>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html#features">Fonctionnalités</a></li>
+          <li><a href="index.html#ecole">Module École</a></li>
+          <li><a href="index.html#outils">Outils du musulman</a></li>
+          <li><a href="index.html#download">Télécharger</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Ressources</h4>
+        <ul>
+          <li><a href="about.html">À propos</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="privacy.html">Confidentialité</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="f-bottom">© 2026 حَامِلُ الْقُرْآنْ — Hamil Al-Quran. Tous droits réservés.</div>
+  </div>
+</footer>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="js/emailjs-config.js"></script>
+<script src="js/contact-form.js"></script>
+<script src="js/site.js"></script>
 </body>
 </html>
