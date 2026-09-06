@@ -680,13 +680,62 @@ ar: {
 }
 };
 
+/* ---------- Accueil immersif ---------- */
+Object.assign(window.I18N.fr, {
+  skip_main: "Aller au contenu", hero_eyebrow: "Un lien au Coran. Chaque jour.",
+  hero_intro: "Un espace pour lire, mémoriser et progresser. À votre rythme, où que vous soyez.",
+  hero_note: "Gratuit. Sans publicité. Disponible hors-ligne.",
+  explore_scroll: "Un nouveau regard sur votre parcours",
+  motion_pause: "Mettre les animations en pause", motion_play: "Reprendre les animations",
+  galaxy_interaction: "Faites glisser ou utilisez les flèches pour tourner la galaxie. Origine pour recentrer.",
+  galaxy_hint: "Faites glisser pour explorer", galaxy_replay: "Rejouer la galaxie",
+  screen_prev: "Écran précédent", screen_next: "Écran suivant", video_dialog: "Tutoriel vidéo",
+  journey_kicker: "Votre parcours, simplement", journey_title: "Un verset.<br>Un pas de plus.",
+  journey_intro: "De la première lecture à la mémorisation, chaque étape trouve sa place.",
+  journey_read: "Retrouvez le plaisir de lire.", journey_read_detail: "Mushaf multi-riwaya · Lecture confortable",
+  journey_revise: "Faites grandir vos acquis.", journey_revise_detail: "Objectifs personnels · Révision intelligente",
+  journey_listen: "Laissez la récitation vous guider.", journey_listen_detail: "Écoute · Répétition · Mémorisation"
+});
+Object.assign(window.I18N.en, {
+  skip_main: "Skip to content", hero_eyebrow: "A connection to the Quran. Every day.",
+  hero_intro: "A space to read, memorize and grow. At your own pace, wherever you are.",
+  hero_note: "Free. No ads. Available offline.",
+  explore_scroll: "A fresh perspective on your journey",
+  motion_pause: "Pause animations", motion_play: "Resume animations",
+  galaxy_interaction: "Drag or use the arrow keys to rotate the galaxy. Press Home to reset.",
+  galaxy_hint: "Drag to explore", galaxy_replay: "Replay the galaxy",
+  screen_prev: "Previous screen", screen_next: "Next screen", video_dialog: "Video tutorial",
+  journey_kicker: "Your journey, made simple", journey_title: "One verse.<br>One step closer.",
+  journey_intro: "From your first reading to memorization, every step has its place.",
+  journey_read: "Rediscover the joy of reading.", journey_read_detail: "Multiple riwayat · Comfortable reading",
+  journey_revise: "Build on what you know.", journey_revise_detail: "Personal goals · Smart revision",
+  journey_listen: "Let recitation guide you.", journey_listen_detail: "Listen · Repeat · Memorize"
+});
+Object.assign(window.I18N.ar, {
+  skip_main: "انتقل إلى المحتوى", hero_eyebrow: "صلة بالقرآن. كل يوم.",
+  hero_intro: "مساحة للقراءة والحفظ والتقدّم. على وتيرتك، أينما كنت.",
+  hero_note: "مجاني. بلا إعلانات. متاح دون اتصال.",
+  explore_scroll: "نظرة جديدة إلى رحلتك مع القرآن",
+  motion_pause: "إيقاف الحركة مؤقتًا", motion_play: "استئناف الحركة",
+  galaxy_interaction: "اسحب أو استخدم مفاتيح الأسهم لتدوير المجرة. اضغط على Home لإعادة الضبط.",
+  galaxy_hint: "اسحب للاستكشاف", galaxy_replay: "إعادة عرض المجرة",
+  screen_prev: "الشاشة السابقة", screen_next: "الشاشة التالية", video_dialog: "فيديو تعليمي",
+  journey_kicker: "رحلتك، بكل بساطة", journey_title: "آية.<br>وخطوة إلى الأمام.",
+  journey_intro: "من القراءة الأولى إلى الحفظ، لكل خطوة مكانها.",
+  journey_read: "اكتشف متعة القراءة من جديد.", journey_read_detail: "مصحف متعدد الروايات · قراءة مريحة",
+  journey_revise: "رسّخ ما حفظته.", journey_revise_detail: "أهداف شخصية · مراجعة ذكية",
+  journey_listen: "دع التلاوة ترشدك.", journey_listen_detail: "استماع · تكرار · حفظ"
+});
+
 /* ---------- Moteur ---------- */
 (function(){
   const KEY='hq-lang', LANGS=['fr','en','ar'];
   const qs=new URLSearchParams(location.search).get('lang');
   const nav=(navigator.language||'fr').slice(0,2).toLowerCase();
+  let saved='';
+  try{saved=localStorage.getItem(KEY)||''}catch(e){}
   let lang=(qs&&LANGS.includes(qs))?qs
-        :(localStorage.getItem(KEY)&&LANGS.includes(localStorage.getItem(KEY)))?localStorage.getItem(KEY)
+        :LANGS.includes(saved)?saved
         :LANGS.includes(nav)?nav:'en';
 
   window.i18nT=k=>{const d=window.I18N[lang]||window.I18N.fr;return d[k]!=null?d[k]:window.I18N.fr[k]};
@@ -704,9 +753,14 @@ ar: {
       const v=d[el.dataset.i18nPh];
       if(v!=null)el.placeholder=v;
     });
+    document.querySelectorAll('[data-i18n-label]').forEach(el=>{
+      const v=d[el.dataset.i18nLabel];
+      if(v!=null)el.setAttribute('aria-label',v);
+    });
     document.documentElement.lang=l;
     document.documentElement.dir=l==='ar'?'rtl':'ltr';
     document.querySelectorAll('.lang-switch button').forEach(b=>b.classList.toggle('active',b.dataset.lang===l));
+    window.dispatchEvent(new CustomEvent('hq:languagechange',{detail:{lang:l}}));
   }
 
   document.querySelectorAll('.lang-switch button').forEach(b=>b.addEventListener('click',()=>apply(b.dataset.lang)));

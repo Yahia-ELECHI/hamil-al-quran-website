@@ -14,9 +14,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Amiri:wght@400;700&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <link rel="stylesheet" href="css/theme.css">
+<link rel="stylesheet" href="css/ambient.css">
 </head>
-<body>
+<body class="motion-site galaxy-unavailable">
 <div class="bg"></div><div class="orb a"></div><div class="orb b"></div><div class="orb c"></div><div class="pattern"></div>
+<div class="ambient-stage" aria-hidden="true"><canvas id="ambient-canvas"></canvas></div>
 
 <!-- NAV -->
 <nav class="nav" id="nav">
@@ -35,12 +37,12 @@
       </div>
       <a href="index.html#download" class="nav-cta" data-i18n="nav_dl">Télécharger</a>
     </div>
-    <div class="burger" id="burger"><span></span><span></span><span></span></div>
+    <button type="button" class="burger" id="burger" aria-controls="navlinks" aria-expanded="false" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </nav>
 
 <!-- EN-TÊTE -->
-<section class="page-head">
+<section class="page-head" data-cosmos="contact">
   <div class="container">
     <span class="kicker" data-i18n="c_kicker">Contact</span>
     <h1 data-i18n="c_h1">Nous contacter</h1>
@@ -49,7 +51,7 @@
 </section>
 
 <!-- CONTENU -->
-<section class="page-main">
+<section class="page-main" data-cosmos="contact">
   <div class="container contact-grid">
     <div class="contact-side">
       <div class="card reveal">
@@ -121,7 +123,7 @@
 </section>
 
 <!-- FOOTER -->
-<footer class="footer">
+<footer class="footer" data-cosmos="footer">
   <div class="container">
     <div class="f-grid">
       <div>
@@ -157,5 +159,9 @@
 <script src="js/contact-form.js"></script>
 <script src="js/i18n.js"></script>
 <script src="js/site.js"></script>
+<div class="global-motion-controls">
+  <button id="motion-toggle" class="motion-toggle" type="button" aria-pressed="false"><i class="fas fa-pause" aria-hidden="true"></i><span data-i18n="motion_pause">Mettre les animations en pause</span></button>
+</div>
+<script src="js/ambient.js"></script>
 </body>
 </html>

@@ -1,0 +1,86 @@
+/* Cadre fourni par l'utilisateur, intact : PNG RGBA 875 × 1798.
+   Deux tranches conservent coins et boutons à leur échelle native. On retire
+   seulement le rail droit au milieu. L'ouverture mesure 685 px de large, avec
+   76 px de marge en haut et en bas : hauteur = 152 + 685 × hauteur/largeur écran. */
+.motion-home .device-stage{
+  --device-height:1637.094851;
+  position:relative;flex-shrink:0;aspect-ratio:875/var(--device-height);height:auto;
+  padding:0;border:0;border-radius:0;overflow:visible;background:none;
+  box-shadow:none;animation:none;transition:none;transform:none;
+  perspective:1100px;direction:ltr;isolation:isolate;will-change:auto;
+}
+.motion-home .device-stage[data-screen-format="legacy"]{--device-height:1689.444444}
+/* Réserve le format le plus haut pour stabiliser la page et les contrôles. */
+.motion-home .phone.device-stage{width:310px;height:auto;aspect-ratio:875/1689.444444;display:grid;place-items:center}
+.motion-home .phone.device-stage>.device-model{height:auto}
+.motion-home .journey-device.device-stage{width:270px}
+.motion-home .mini-phone.device-stage{width:clamp(135px,16vw,190px)}
+.motion-home .shot.device-stage{width:240px;transform:none;transition:none}
+.motion-home .phone.device-stage::before{content:none}
+.motion-home .band-visual{transform:none;gap:0;align-items:center;direction:ltr}
+.motion-home .gallery{padding-top:35px;padding-bottom:60px;gap:18px;align-items:center}
+.device-model{
+  position:relative;width:100%;height:100%;aspect-ratio:875/var(--device-height,1637.094851);
+  transform:translate3d(var(--device-x,0px),var(--device-y,0px),0)
+    rotateX(var(--device-rx,0deg)) rotateY(var(--device-ry,0deg)) rotateZ(var(--device-rz,0deg));
+  transform-origin:50% 52%;
+  /* L'écran ne passe pas dans un filtre de groupe avant sa projection 3D. */
+  filter:none;
+}
+.device-stage.is-device-visible .device-model{will-change:transform}
+/* Le fond déborde de 2 pixels sous le métal ; la capture conserve sa largeur. */
+.device-model::before{
+  content:"";position:absolute;left:10.6286%;top:calc(7400% / var(--device-height));width:78.7429%;
+  height:calc(100% - 14800% / var(--device-height));
+  border-radius:13.2075% / calc(9100% / (var(--device-height) - 148));background:#050505;
+  box-shadow:0 24px 24px #0006;
+}
+.motion-home .device-display{
+  position:absolute;left:10.8571%;top:calc(7600% / var(--device-height));width:78.2857%;
+  height:calc(100% - 15200% / var(--device-height));
+  border-radius:12.9927% / calc(8900% / (var(--device-height) - 152));overflow:hidden;background:transparent;
+  isolation:isolate;direction:ltr;
+}
+.motion-home .device-display img{
+  display:block;width:100%;height:100%;aspect-ratio:auto;object-fit:contain;
+}
+/* Aucun voile sur la capture : contraste et couleurs de l'original conservés.
+   Les reflets réalistes restent ceux du cadre PNG, inchangé. */
+.device-display::after{content:none}
+.motion-home .device-frame{
+  display:block;position:absolute;left:0;top:0;bottom:auto;width:100%;height:auto;
+  aspect-ratio:875/1798;object-fit:contain;pointer-events:none;user-select:none;
+  clip-path:inset(0 0 52.447163% 0);
+}
+/* Chevauchement de 9 px source sur les rails droits : pas de fente sous-pixel. */
+.motion-home .device-frame-bottom{
+  top:auto;bottom:0;clip-path:inset(calc((2644 - var(--device-height)) * 100% / 1798) 0 0 0);
+}
+.motion-home .device-display .journey-screen{transform:none;transition:opacity .65s ease}
+.motion-home .device-display .phone-track{height:100%;direction:ltr}
+.motion-home .device-display .phone-track img{min-width:100%;flex:0 0 100%}
+.device-stage[data-device="journey"]{--device-rz:2deg;--device-ry:-6deg}
+.device-stage[data-device="preview"]{--device-rz:2deg;--device-ry:-5deg}
+.device-stage[data-device="school-left"]{--device-rz:-7deg;--device-y:14px;--device-ry:-7deg}
+.device-stage[data-device="school-right"]{--device-rz:6deg;--device-y:-24px;--device-ry:7deg}
+.device-stage[data-device="gallery"]{--device-rz:-2deg}
+.device-stage[data-device="gallery"]:nth-child(even){--device-rz:2deg;--device-y:12px}
+@media(min-width:1500px){.motion-home .phone.device-stage{width:335px}}
+@media(max-width:900px){
+  .motion-home .journey-device.device-stage{width:235px}
+  .motion-home .phone.device-stage{width:285px}
+  .motion-home .mini-phone.device-stage{width:185px}
+}
+@media(max-width:600px){
+  .motion-home .phone.device-stage{width:260px;max-width:80vw}
+  .motion-home .mini-phone.device-stage{width:clamp(110px,36vw,165px)}
+  .motion-home .shot.device-stage{width:205px}
+  .motion-home .gallery{gap:8px;padding-top:25px}
+  .device-model::before{box-shadow:0 14px 14px #0005}
+}
+.motion-paused .device-stage .device-display .journey-screen{transition:none}
+.motion-paused .device-stage .device-model{will-change:auto}
+@media(prefers-reduced-motion:reduce){
+  .motion-home .device-stage .device-model{transform:none;will-change:auto}
+  .device-display::after{display:none}
+}

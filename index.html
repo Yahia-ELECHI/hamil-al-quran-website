@@ -24,9 +24,15 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <link rel="stylesheet" href="css/theme.css">
+<link rel="stylesheet" href="css/experience.css">
+<link rel="stylesheet" href="css/ambient.css">
+<link rel="stylesheet" href="css/devices.css?v=app-captures-sharp-1">
 </head>
-<body>
+<body class="motion-home motion-site galaxy-unavailable">
+<a class="skip-link" href="#main" data-i18n="skip_main">Aller au contenu</a>
+<div class="reading-progress" aria-hidden="true"><span></span></div>
 <div class="bg"></div><div class="orb a"></div><div class="orb b"></div><div class="orb c"></div><div class="pattern"></div>
+<div class="ambient-stage" aria-hidden="true"><canvas id="ambient-canvas"></canvas></div>
 
 <!-- NAV -->
 <nav class="nav" id="nav">
@@ -46,45 +52,32 @@
       </div>
       <a href="#download" class="nav-cta" data-i18n="nav_dl">Télécharger</a>
     </div>
-    <div class="burger" id="burger"><span></span><span></span><span></span></div>
+    <button type="button" class="burger" id="burger" aria-controls="navlinks" aria-expanded="false" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </nav>
 
 <!-- HERO -->
-<section class="hero" id="home">
+<main id="main">
+<section class="hero" id="home" data-cosmos="home">
   <div class="container hero-grid">
     <div class="hero-content">
-      <img src="assets/logo.png" alt="" class="hero-logo">
+      <p class="hero-eyebrow"><span></span><span data-i18n="hero_eyebrow">Un lien au Coran. Chaque jour.</span></p>
       <h1 lang="ar">حَامِلُ الْقُرْآنْ</h1>
       <p class="tagline" data-i18n="hero_tagline">Mémorisez et révisez le Coran, autrement.</p>
-      <p class="lead" data-i18n="hero_lead">Une application complète et élégante : Mushaf multi-riwaya, plans de révision intelligents, détection d'erreurs de Tajweed, module École pour enseignants et élèves, et une boîte à outils du musulman — le tout hors-ligne, avec synchronisation cloud sécurisée en option.</p>
+      <p class="lead" data-i18n="hero_intro">Un espace pour lire, mémoriser et progresser. À votre rythme, où que vous soyez.</p>
       <div class="hero-cta">
         <a href="#download" class="btn btn-gold" data-i18n="hero_btn_dl"><i class="fas fa-download"></i> Télécharger</a>
         <a href="#features" class="btn btn-ghost" data-i18n="hero_btn_disc"><i class="fas fa-compass"></i> Découvrir</a>
       </div>
-      <div class="quote reveal">
-        <div class="q" lang="ar">خَيْرُكُمْ مَنْ تَعَلَّمَ الْقُرْآنَ وَعَلَّمَهُ</div>
-        <div class="t" data-i18n="quote_t">« Le meilleur d'entre vous est celui qui apprend le Coran et l'enseigne. »</div>
-        <div class="r" data-i18n="quote_r">Rapporté par Al-Bukhārī</div>
-      </div>
+      <p class="hero-note" data-i18n="hero_note">Gratuit. Sans publicité. Disponible hors-ligne.</p>
     </div>
-    <div class="hero-visual">
-      <div class="phone-wrap">
-        <div class="phone">
-          <div class="phone-glow"></div>
-          <div class="phone-screen">
-            <div class="phone-track" id="track">
-              <img src="assets/Screenshot_1754577052.png" alt="Accueil">
-              <img src="assets/Screenshot_1754579705.png" alt="Mushaf">
-              <img src="assets/Screenshot_1754582841.png" alt="Révision">
-              <img src="assets/Screenshot_1754582875.png" alt="Audio">
-              <img src="assets/Screenshot_1754582936.png" alt="Statistiques">
-              <img src="assets/Screenshot_1754583012.png" alt="Objectifs">
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="galaxy-window">
+      <button id="galaxy-interaction" class="galaxy-interaction" type="button" aria-label="Faites glisser ou utilisez les flèches pour tourner la galaxie. Origine pour recentrer." data-i18n-label="galaxy_interaction" aria-describedby="galaxy-hint" hidden></button>
+      <p id="galaxy-hint" class="galaxy-hint" hidden><i class="fas fa-arrows-up-down-left-right" aria-hidden="true"></i><span data-i18n="galaxy_hint">Faites glisser pour explorer</span></p>
     </div>
+  </div>
+  <div class="hero-bottom container">
+    <a class="scroll-cue" href="#parcours"><span data-i18n="explore_scroll">Un nouveau regard sur votre parcours</span><i class="fas fa-arrow-down" aria-hidden="true"></i></a>
   </div>
 </section>
 
@@ -99,8 +92,55 @@
   </div>
 </div>
 
+<!-- PARCOURS — défilement naturel, aperçu fixe sur grand écran -->
+<section class="journey sec" id="parcours" aria-labelledby="journey-title" data-cosmos="journey">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="kicker" data-i18n="journey_kicker">Votre parcours, simplement</span>
+      <h2 id="journey-title" data-i18n="journey_title">Un verset.<br>Un pas de plus.</h2>
+      <p data-i18n="journey_intro">De la première lecture à la mémorisation, chaque étape trouve sa place.</p>
+    </div>
+    <div class="journey-layout">
+      <div class="journey-chapters">
+        <article class="journey-step" data-step="0">
+          <span class="chapter-number" aria-hidden="true">01 —</span>
+          <h3 data-i18n="journey_read">Retrouvez le plaisir de lire.</h3>
+          <p data-i18n="f1_d">Lisez le Coran en images haute qualité, avec plusieurs riwāyāt (Hafs, Warsh, Qālūn…). Touchez un verset pour interagir, marquer, écouter.</p>
+          <span class="chapter-detail" data-i18n="journey_read_detail">Mushaf multi-riwaya · Lecture confortable</span>
+        </article>
+        <article class="journey-step" data-step="1">
+          <span class="chapter-number" aria-hidden="true">02 —</span>
+          <h3 data-i18n="journey_revise">Faites grandir vos acquis.</h3>
+          <p data-i18n="f2_d">Des plans de révision générés selon vos objectifs, avec segments quotidiens, répétitions (tekrar) et rappels — pour ancrer durablement ce que vous mémorisez.</p>
+          <span class="chapter-detail" data-i18n="journey_revise_detail">Objectifs personnels · Révision intelligente</span>
+        </article>
+        <article class="journey-step" data-step="2">
+          <span class="chapter-number" aria-hidden="true">03 —</span>
+          <h3 data-i18n="journey_listen">Laissez la récitation vous guider.</h3>
+          <p data-i18n="f4_d">Écoutez des récitateurs, suivez le verset en surbrillance, enregistrez votre récitation et créez des playlists avec répétitions et boucles.</p>
+          <span class="chapter-detail" data-i18n="journey_listen_detail">Écoute · Répétition · Mémorisation</span>
+        </article>
+      </div>
+      <div class="journey-visual" aria-hidden="true">
+        <div class="journey-halo"></div>
+        <div class="journey-device device-stage" data-device="journey">
+          <div class="device-model">
+          <div class="device-display">
+          <img class="journey-screen is-active" src="assets/app-2026/mushaf-verset.jpeg" alt="" loading="lazy" width="738" height="1600">
+          <img class="journey-screen" src="assets/app-2026/revision-intelligente.jpeg" alt="" loading="lazy" width="738" height="1600">
+          <img class="journey-screen" src="assets/app-2026/lecteur-audio.jpeg" alt="" loading="lazy" width="738" height="1600">
+          </div>
+          <img class="device-frame" src="assets/phone-frame-graphite.png" alt="" width="875" height="1798" loading="lazy" decoding="async" draggable="false"><img class="device-frame device-frame-bottom" src="assets/phone-frame-graphite.png" alt="" width="875" height="1798" loading="lazy" decoding="async" draggable="false">
+          </div>
+        </div>
+        <div class="journey-indicators"><span class="is-active"></span><span></span><span></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- FEATURES -->
-<section class="sec" id="features">
+<section class="sec" id="features" data-cosmos="features">
   <div class="container">
     <div class="sec-head reveal">
       <span class="kicker" data-i18n="feat_kicker">Fonctionnalités</span>
@@ -119,7 +159,7 @@
 </section>
 
 <!-- ÉCOLE -->
-<section class="sec" id="ecole">
+<section class="sec" id="ecole" data-cosmos="school">
   <div class="container">
     <div class="band reveal">
       <div>
@@ -134,15 +174,25 @@
         </ul>
       </div>
       <div class="band-visual">
-        <img class="mini-phone" src="assets/Screenshot_1754582892.png" alt="École">
-        <img class="mini-phone up" src="assets/Screenshot_1754583020.png" alt="Séance">
+        <div class="mini-phone device-stage" data-device="school-left">
+          <div class="device-model">
+            <div class="device-display"><img src="assets/app-2026/espace-enseignant.jpeg" alt="Création de l'espace enseignant" width="738" height="1600" loading="lazy"></div>
+            <img class="device-frame" src="assets/phone-frame-graphite.png" alt="" width="875" height="1798" loading="lazy" decoding="async" draggable="false"><img class="device-frame device-frame-bottom" src="assets/phone-frame-graphite.png" alt="" width="875" height="1798" loading="lazy" decoding="async" draggable="false">
+          </div>
+        </div>
+        <div class="mini-phone up device-stage" data-device="school-right">
+          <div class="device-model">
+            <div class="device-display"><img src="assets/app-2026/espace-eleve.jpeg" alt="Espace élève et recherche d'un enseignant" width="738" height="1600" loading="lazy"></div>
+            <img class="device-frame" src="assets/phone-frame-graphite.png" alt="" width="875" height="1798" loading="lazy" decoding="async" draggable="false"><img class="device-frame device-frame-bottom" src="assets/phone-frame-graphite.png" alt="" width="875" height="1798" loading="lazy" decoding="async" draggable="false">
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- OUTILS -->
-<section class="sec" id="outils">
+<section class="sec" id="outils" data-cosmos="tools">
   <div class="container">
     <div class="sec-head reveal">
       <span class="kicker" data-i18n="out_kicker">Outils du musulman</span>
@@ -159,7 +209,7 @@
 </section>
 
 <!-- TUTORIELS -->
-<section class="sec" id="tutoriels">
+<section class="sec" id="tutoriels" data-cosmos="tutorials">
   <div class="container">
     <div class="sec-head reveal">
       <span class="kicker" data-i18n="tu_kicker">Tutoriels</span>
@@ -203,28 +253,60 @@
 </section>
 
 <!-- APERÇU -->
-<section class="sec" id="apercu">
-  <div class="container">
+<section class="sec" id="apercu" data-cosmos="preview">
+  <div class="container preview-layout">
     <div class="sec-head reveal">
       <span class="kicker" data-i18n="ap_kicker">Aperçu</span>
       <h2 data-i18n="ap_h2">Une interface soignée</h2>
       <p data-i18n="ap_p">Des thèmes clairs et sombres, une lecture confortable, une expérience fluide.</p>
     </div>
+    <div class="hero-visual app-preview">
+      <div class="phone-wrap">
+        <div class="phone device-stage" data-device="preview">
+          <div class="device-model">
+          <div class="phone-screen device-display">
+            <div class="phone-track" id="track">
+              <img src="assets/app-2026/accueil.jpeg" alt="Accueil" width="738" height="1600" loading="lazy">
+              <img src="assets/app-2026/mushaf-verset.jpeg" alt="Mushaf et outils du verset" width="738" height="1600" loading="lazy">
+              <img src="assets/app-2026/revision-intelligente.jpeg" alt="Programme de révision intelligente" width="738" height="1600" loading="lazy">
+              <img src="assets/app-2026/lecteur-audio.jpeg" alt="Lecteur audio et playlist" width="738" height="1600" loading="lazy">
+              <img src="assets/app-2026/tableau-de-bord.jpeg" alt="Tableau de bord du profil" width="738" height="1600" loading="lazy">
+              <img src="assets/Screenshot_1754583012.png" alt="Objectifs" width="1080" height="2424" data-screen-format="legacy" loading="lazy">
+            </div>
+          </div>
+          <img class="device-frame" src="assets/phone-frame-graphite.png" alt="" width="875" height="1798" loading="lazy" decoding="async" draggable="false"><img class="device-frame device-frame-bottom" src="assets/phone-frame-graphite.png" alt="" width="875" height="1798" loading="lazy" decoding="async" draggable="false">
+          </div>
+        </div>
+      </div>
+      <div class="phone-controls">
+        <button id="phone-prev" type="button" aria-label="Écran précédent" data-i18n-label="screen_prev"><i class="fas fa-arrow-left" aria-hidden="true"></i></button>
+        <span class="phone-count"><span id="phone-current">01</span><span class="count-divider"> / </span><span id="phone-total">06</span></span>
+        <button id="phone-next" type="button" aria-label="Écran suivant" data-i18n-label="screen_next"><i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+      </div>
+    </div>
   </div>
   <div class="gallery reveal">
-    <div class="shot"><img src="assets/Screenshot_1754577052.png" alt=""></div>
-    <div class="shot"><img src="assets/Screenshot_1754579705.png" alt=""></div>
-    <div class="shot"><img src="assets/Screenshot_1754582841.png" alt=""></div>
-    <div class="shot"><img src="assets/Screenshot_1754582875.png" alt=""></div>
-    <div class="shot"><img src="assets/Screenshot_1754582936.png" alt=""></div>
-    <div class="shot"><img src="assets/Screenshot_1754583012.png" alt=""></div>
-    <div class="shot"><img src="assets/Screenshot_1754583020.png" alt=""></div>
-    <div class="shot"><img src="assets/Screenshot_1754583024.png" alt=""></div>
+    <div class="shot device-stage" data-device="gallery"><div class="device-model"><div class="device-display"><img src="assets/app-2026/accueil.jpeg" alt="Accueil" width="738" height="1600" loading="lazy"></div><img class="device-frame" src="assets/phone-frame-graphite.png" alt="" width="875" height="1798" loading="lazy" decoding="async" draggable="false"><img class="device-frame device-frame-bottom" src="assets/phone-frame-graphite.png" alt="" width="875" height="1798" loading="lazy" decoding="async" draggable="false"></div></div>
+    <div class="shot device-stage" data-device="gallery"><div class="device-model"><div class="device-display"><img src="assets/app-2026/mushaf-verset.jpeg" alt="Mushaf et outils du verset" width="738" height="1600" loading="lazy"></div><img class="device-frame" src="assets/phone-frame-graphite.png" alt="" width="875" height="1798" loading="lazy" decoding="async" draggable="false"><img class="device-frame device-frame-bottom" src="assets/phone-frame-graphite.png" alt="" width="875" height="1798" loading="lazy" decoding="async" draggable="false"></div></div>
+    <div class="shot device-stage" data-device="gallery"><div class="device-model"><div class="device-display"><img src="assets/app-2026/revision-intelligente.jpeg" alt="Programme de révision intelligente" width="738" height="1600" loading="lazy"></div><img class="device-frame" src="assets/phone-frame-graphite.png" alt="" width="875" height="1798" loading="lazy" decoding="async" draggable="false"><img class="device-frame device-frame-bottom" src="assets/phone-frame-graphite.png" alt="" width="875" height="1798" loading="lazy" decoding="async" draggable="false"></div></div>
+    <div class="shot device-stage" data-device="gallery"><div class="device-model"><div class="device-display"><img src="assets/app-2026/lecteur-audio.jpeg" alt="Lecteur audio et playlist" width="738" height="1600" loading="lazy"></div><img class="device-frame" src="assets/phone-frame-graphite.png" alt="" width="875" height="1798" loading="lazy" decoding="async" draggable="false"><img class="device-frame device-frame-bottom" src="assets/phone-frame-graphite.png" alt="" width="875" height="1798" loading="lazy" decoding="async" draggable="false"></div></div>
+    <div class="shot device-stage" data-device="gallery"><div class="device-model"><div class="device-display"><img src="assets/app-2026/tableau-de-bord.jpeg" alt="Tableau de bord du profil" width="738" height="1600" loading="lazy"></div><img class="device-frame" src="assets/phone-frame-graphite.png" alt="" width="875" height="1798" loading="lazy" decoding="async" draggable="false"><img class="device-frame device-frame-bottom" src="assets/phone-frame-graphite.png" alt="" width="875" height="1798" loading="lazy" decoding="async" draggable="false"></div></div>
+    <div class="shot device-stage" data-device="gallery" data-screen-format="legacy"><div class="device-model"><div class="device-display"><img src="assets/Screenshot_1754583012.png" alt="Objectifs de mémorisation" width="1080" height="2424" loading="lazy"></div><img class="device-frame" src="assets/phone-frame-graphite.png" alt="" width="875" height="1798" loading="lazy" decoding="async" draggable="false"><img class="device-frame device-frame-bottom" src="assets/phone-frame-graphite.png" alt="" width="875" height="1798" loading="lazy" decoding="async" draggable="false"></div></div>
+    <div class="shot device-stage" data-device="gallery"><div class="device-model"><div class="device-display"><img src="assets/app-2026/revision-intelligente.jpeg" alt="Création d’un programme de révision" width="738" height="1600" loading="lazy"></div><img class="device-frame" src="assets/phone-frame-graphite.png" alt="" width="875" height="1798" loading="lazy" decoding="async" draggable="false"><img class="device-frame device-frame-bottom" src="assets/phone-frame-graphite.png" alt="" width="875" height="1798" loading="lazy" decoding="async" draggable="false"></div></div>
+    <div class="shot device-stage" data-device="gallery" data-screen-format="legacy"><div class="device-model"><div class="device-display"><img src="assets/Screenshot_1754583024.png" alt="Calendrier des révisions" width="1080" height="2424" loading="lazy"></div><img class="device-frame" src="assets/phone-frame-graphite.png" alt="" width="875" height="1798" loading="lazy" decoding="async" draggable="false"><img class="device-frame device-frame-bottom" src="assets/phone-frame-graphite.png" alt="" width="875" height="1798" loading="lazy" decoding="async" draggable="false"></div></div>
+    <div class="shot device-stage" data-device="gallery"><div class="device-model"><div class="device-display"><img src="assets/app-2026/examen.jpeg" alt="Configuration d’un examen" width="738" height="1600" loading="lazy"></div><img class="device-frame" src="assets/phone-frame-graphite.png" alt="" width="875" height="1798" loading="lazy" decoding="async" draggable="false"><img class="device-frame device-frame-bottom" src="assets/phone-frame-graphite.png" alt="" width="875" height="1798" loading="lazy" decoding="async" draggable="false"></div></div>
   </div>
 </section>
 
 <!-- DOWNLOAD -->
-<section class="sec" id="download">
+<div class="manifesto" data-cosmos="quote">
+  <div class="quote reveal">
+    <div class="q" lang="ar">خَيْرُكُمْ مَنْ تَعَلَّمَ الْقُرْآنَ وَعَلَّمَهُ</div>
+    <div class="t" data-i18n="quote_t">« Le meilleur d'entre vous est celui qui apprend le Coran et l'enseigne. »</div>
+    <div class="r" data-i18n="quote_r">Rapporté par Al-Bukhārī</div>
+  </div>
+</div>
+<section class="sec" id="download" data-cosmos="download">
   <div class="container dl">
     <div class="sec-head reveal" style="margin-bottom:20px">
       <span class="kicker" data-i18n="dl_kicker">Télécharger</span>
@@ -247,7 +329,7 @@
 </section>
 
 <!-- FAQ -->
-<section class="sec" id="faq">
+<section class="sec" id="faq" data-cosmos="reading">
   <div class="container">
     <div class="sec-head reveal">
       <span class="kicker" data-i18n="faq_kicker">FAQ</span>
@@ -264,7 +346,8 @@
 </section>
 
 <!-- FOOTER -->
-<footer class="footer">
+</main>
+<footer class="footer" data-cosmos="footer">
   <div class="container">
     <div class="f-grid">
       <div>
@@ -296,7 +379,7 @@
 </footer>
 
 <!-- Lecteur vidéo (tutoriels) : vidéos auto-hébergées, lecteur natif -->
-<div class="tuto-modal" hidden>
+<div class="tuto-modal" role="dialog" aria-modal="true" aria-label="Tutoriel vidéo" data-i18n-label="video_dialog" hidden>
   <div class="tuto-modal-box">
     <div class="tuto-modal-bar">
       <a class="tuto-open-yt" href="#" target="_blank" rel="noopener" data-i18n="tu_open"><i class="fab fa-youtube"></i> Ouvrir dans YouTube</a>
@@ -306,7 +389,14 @@
   </div>
 </div>
 
+<div class="global-motion-controls">
+  <button id="galaxy-replay" class="galaxy-replay" type="button" aria-label="Rejouer la galaxie" data-i18n-label="galaxy_replay" hidden><i class="fas fa-rotate-left" aria-hidden="true"></i></button>
+  <button id="motion-toggle" class="motion-toggle" type="button" aria-pressed="false"><i class="fas fa-pause" aria-hidden="true"></i><span data-i18n="motion_pause">Mettre les animations en pause</span></button>
+</div>
 <script src="js/i18n.js"></script>
-<script src="js/site.js"></script>
+<script src="js/site.js?v=app-captures-2026"></script>
+<script src="js/experience.js?v=phones-1"></script>
+<script src="js/ambient.js"></script>
+<script src="js/devices.js?v=phones-1"></script>
 </body>
 </html>

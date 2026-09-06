@@ -9,7 +9,7 @@ Marketing website for **Hamil Al-Quran** (حامل القرآن), a Quran memori
 ## Commands
 
 - **Local preview:** serve the directory statically, e.g. `python -m http.server 8000`, then open `http://localhost:8000`.
-- **Deploy:** push to `master` on GitHub (`Yahia-ELECHI/hamil-al-quran-website`) — Cloudflare Pages auto-detects the push and redeploys https://hamil-al-quran.com. There is no build/lint/test command. Local `master` tracks `origin/master`; pull before working, since commits also land from other machines/sessions.
+- **Deploy:** push to `main` on GitHub (`Yahia-ELECHI/hamil-al-quran-website`) — Cloudflare Pages auto-detects the push and redeploys https://hamil-al-quran.com. There is no build/lint/test command. Local `main` tracks `origin/main`; pull before working, since commits also land from other machines/sessions. `main` consolidates the former `master` history; use `main` for subsequent work.
 
 ## Architecture (navy+gold redesign, 2026)
 

@@ -28,6 +28,8 @@ yarn-error.log*
 
 # Environment variables
 .env
+.env.*
+*.env
 .env.local
 .env.production.local
 github_config.env
@@ -53,3 +55,13 @@ node_modules/
 
 # Deployment files
 .wrangler/
+
+# Local design references and original captures (not website runtime)
+/photo app/
+/Image Codex *.png
+/gptastra.js
+/0kyg3mclnp-m6.js
+/0xnf_9ewj1sr3.js
+/1rfzm7jt1igp4.js
+/1uq8b6yni-tzr.js
+/2jgpexr4u1zu_.js

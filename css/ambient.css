@@ -1,0 +1,34 @@
+/* Un même ciel, derrière les cinq pages ; aucune couche ne capture les clics. */
+.motion-site{background:#060a11}
+.motion-site>.orb,.motion-site>.pattern{display:none}
+.motion-site>.bg{background:#060a11}
+.motion-site>section,.motion-site>main,.motion-site>.footer{position:relative;z-index:1}
+.ambient-stage{position:fixed;inset:0;z-index:0;pointer-events:none;background:#060a11}
+.ambient-stage::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 60% 45%,transparent 55%,#090d1840)}
+#ambient-canvas{display:block;width:100%;height:100%}
+#ambient-canvas[hidden]{display:none}
+.motion-site:not(.motion-home) .card,.motion-site:not(.motion-home) .panel,.motion-site:not(.motion-home) .qa{background:rgba(10,16,28,.94)}
+.motion-site.motion-home .card{background:rgba(9,14,23,.92)}
+.motion-site.motion-home .band{background:rgba(10,16,27,.93)}
+.motion-site .global-motion-controls{position:fixed;z-index:80;inset:auto 24px 18px auto;display:flex;gap:9px;align-items:center;max-width:calc(100vw - 48px)}
+.global-motion-controls button{display:flex;justify-content:center;align-items:center;gap:9px;min-height:44px;border:1px solid #c9d6e033;border-radius:100px;background:#090e19e8;backdrop-filter:blur(12px);color:#d7dce5;font:500 .75rem/1.4 Montserrat,sans-serif;padding:10px 16px;cursor:pointer;box-shadow:0 4px 22px #0003}
+.global-motion-controls button:hover{border-color:#e5cc9488;color:#e5cc94}
+.global-motion-controls button:focus-visible{outline:2px solid #e5cc94;outline-offset:4px}
+.global-motion-controls .galaxy-replay{width:44px;flex:none;padding:0}
+.global-motion-controls button[hidden]{display:none}
+.global-motion-controls button:disabled{opacity:.4;cursor:default}
+.motion-site:not(.motion-home) .global-motion-controls .motion-toggle{width:44px;padding:0;font-size:14px}
+.motion-site:not(.motion-home) .global-motion-controls .motion-toggle span{display:none}
+.motion-site .footer{padding-bottom:90px}
+.motion-site #tutoriels{background:#060a1155}
+.motion-site #faq .qa{background:#060a1166}
+html.motion-paused{scroll-behavior:auto}
+.motion-paused *,.motion-paused *::before,.motion-paused *::after{animation-play-state:paused!important}
+@media(max-width:600px){
+  .motion-site .global-motion-controls{right:14px;bottom:14px;gap:7px}
+  .global-motion-controls .motion-toggle{width:44px;max-width:none;padding:0;font-size:14px}
+  .global-motion-controls .motion-toggle span{display:none}
+}
+@media(prefers-reduced-motion:reduce){
+  .motion-site *,.motion-site *::before,.motion-site *::after{animation:none!important;transition:none!important}
+}

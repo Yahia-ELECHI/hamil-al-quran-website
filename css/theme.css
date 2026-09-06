@@ -49,7 +49,7 @@ section{position:relative;z-index:1}
 .nav-links a{padding:9px 16px;border-radius:12px;font-size:.94rem;color:var(--ink-70);transition:.2s;font-weight:500}
 .nav-links a:hover{color:var(--ink);background:var(--glass)}
 .nav-cta{padding:10px 20px;border-radius:12px;background:linear-gradient(135deg,var(--gold),var(--gold-2));color:#1a1330;font-weight:700}
-.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:transparent;border:0;color:inherit}
 .burger span{width:24px;height:2px;background:var(--ink);border-radius:2px;transition:.3s}
 
 /* ---------- Boutons ---------- */
@@ -206,7 +206,7 @@ section{position:relative;z-index:1}
 
 /* Reveal : le contenu est TOUJOURS visible par défaut ; `.in` ne fait que
    JOUER une animation d'entrée → jamais de contenu masqué durablement. */
-.reveal.in{animation:rise .7s cubic-bezier(.2,.8,.2,1) both}
+.reveal.in{opacity:1} /* Apparition progressive pilotée par site.js, sans masquer le contenu. */
 @keyframes rise{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
 
 /* =========================================================

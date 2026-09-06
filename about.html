@@ -14,9 +14,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Amiri:wght@400;700&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <link rel="stylesheet" href="css/theme.css">
+<link rel="stylesheet" href="css/ambient.css">
 </head>
-<body>
+<body class="motion-site galaxy-unavailable">
 <div class="bg"></div><div class="orb a"></div><div class="orb b"></div><div class="orb c"></div><div class="pattern"></div>
+<div class="ambient-stage" aria-hidden="true"><canvas id="ambient-canvas"></canvas></div>
 
 <!-- NAV -->
 <nav class="nav" id="nav">
@@ -35,12 +37,12 @@
       </div>
       <a href="index.html#download" class="nav-cta" data-i18n="nav_dl">Télécharger</a>
     </div>
-    <div class="burger" id="burger"><span></span><span></span><span></span></div>
+    <button type="button" class="burger" id="burger" aria-controls="navlinks" aria-expanded="false" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </nav>
 
 <!-- EN-TÊTE -->
-<section class="page-head">
+<section class="page-head" data-cosmos="about">
   <div class="container">
     <span class="kicker" data-i18n="ab_kicker">À propos</span>
     <h1 data-i18n="ab_h1">À propos de <span class="ar" lang="ar">حَامِلُ الْقُرْآنْ</span></h1>
@@ -49,7 +51,7 @@
 </section>
 
 <!-- MISSION / VISION -->
-<section class="page-main">
+<section class="page-main" data-cosmos="about">
   <div class="container">
     <div class="grid" style="max-width:1080px;margin:0 auto">
       <div class="card reveal">
@@ -100,8 +102,8 @@
         </ul>
       </div>
       <div class="band-visual">
-        <img class="mini-phone" src="assets/Screenshot_1754577052.png" alt="Accueil de l'application">
-        <img class="mini-phone up" src="assets/Screenshot_1754579705.png" alt="Mushaf">
+        <img class="mini-phone" src="assets/app-2026/accueil.jpeg" alt="Accueil de l'application" width="738" height="1600" style="height:auto;align-self:center" loading="lazy">
+        <img class="mini-phone up" src="assets/app-2026/mushaf-verset.jpeg" alt="Mushaf et outils du verset" width="738" height="1600" style="height:auto;align-self:center" loading="lazy">
       </div>
     </div>
   </div>
@@ -123,7 +125,7 @@
 </section>
 
 <!-- FOOTER -->
-<footer class="footer">
+<footer class="footer" data-cosmos="footer">
   <div class="container">
     <div class="f-grid">
       <div>
@@ -156,5 +158,9 @@
 
 <script src="js/i18n.js"></script>
 <script src="js/site.js"></script>
+<div class="global-motion-controls">
+  <button id="motion-toggle" class="motion-toggle" type="button" aria-pressed="false"><i class="fas fa-pause" aria-hidden="true"></i><span data-i18n="motion_pause">Mettre les animations en pause</span></button>
+</div>
+<script src="js/ambient.js"></script>
 </body>
 </html>
