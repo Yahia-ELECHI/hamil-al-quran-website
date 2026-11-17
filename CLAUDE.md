@@ -49,7 +49,7 @@ Playback is deliberately NOT a YouTube embed: the channel's videos have embeddin
 
 ### Download links
 
-Store badges in `index.html#download` are plain `<a href>` links. The Windows link embeds the release version (`releases/download/v2.0.4/HamilAlQuran_Setup_2.0.4.exe`) — shipping a new installer means uploading the `.exe` to a GitHub Release and updating that one href. `*.exe` is gitignored; the installer in the repo root is distributed via Releases, never committed.
+Store badges in `index.html#download` are plain `<a href>` links. The Windows link embeds the release version (`releases/download/v2.0.13/HamilAlQuran_Setup_2.0.13.exe`) — shipping a new installer means uploading the `.exe` to a GitHub Release and updating that one href. `*.exe` is gitignored; the installer in the repo root is distributed via Releases, never committed.
 
 ## Legacy files
 
